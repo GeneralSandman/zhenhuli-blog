@@ -9,4 +9,4 @@
 - 简单、轻便 (压缩后 ~21kB)
 - 无需生成 html 文件
 
-[Get Started](#docsify) 
+[Get Started](readme/) 

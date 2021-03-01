@@ -15,7 +15,15 @@
       name: 'zhenhuli-blog',
       repo: '',
       loadSidebar: true,
-      coverpage: true
+      subMaxLevel: 1,
+      // coverpage: true,
+      alias: {
+        '/foo/(.*)': '/bar/$1', // supports regexp
+        '/zh-cn/changelog': '/changelog',
+        '/changelog':
+        'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG',
+        '/.*/_sidebar.md': '/_sidebar.md', // See #301
+        },
     }
   </script>
   <!-- Docsify v4 -->
