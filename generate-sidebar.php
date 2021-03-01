@@ -63,6 +63,19 @@ function generateNavBar($tags, $path, $navbarFile="_navbar.md")
     file_put_contents($file, $contents);
 }
 
+function generateSideBar($allArticles, $path, $navbarFile="_sidebar.md")
+{
+    $file = path_join($path, $navbarFile);
+    $contents = "";
+
+    foreach($allArticles as $article)  {
+        $title = parseTitleFromFileName($article);
+        $contents .= sprintf("* [%s](%s)\n", $title, $article);
+    }
+
+    file_put_contents($file, $contents);
+}
+
 function getAllEmoji($file="_emoji.md")
 {
     $emojis = array();
@@ -80,10 +93,56 @@ function getAllEmoji($file="_emoji.md")
     fclose($fp);
     return $emojis;
 }
+function startsWith(string $string, string $subString) : bool{
+    return substr($string, 0, strlen($subString)) === $subString;
+    // 或者 strpos($s2, $s1) === 0
+}
+
+function endsWith(string $string, String $subString) : bool{
+    return substr($string, strpos($string, $subString)) === $subString;
+}
+
+function getAllArticle($path) {
+    $allArticles = array();
+
+    $ignoreFiles = array(
+        "_navbar.md",
+        "_tag.md",
+    );
+    $filenames = get_filenamesbydir($path);
+    foreach ($filenames as $fileName) {
+        if (endsWith($fileName, ".md")) {
+            $findIgnore = false;
+            foreach($ignoreFiles as $ignoreFile) {
+                if(endsWith($fileName,$ignoreFile)) {
+                    $findIgnore = true;
+                    break;
+                }
+            }
+            if (!$findIgnore) {
+                $allArticles[] = $fileName;
+            }
+        }
+    }
+    return $allArticles;
+}
+
+function parseTitleFromFileName($fileName) {
+    $pos1= strripos($fileName, "/");
+    $pos2= strripos($fileName, ".md");
+    $pos1 +=1;
+    return substr($fileName, $pos1, $pos2-$pos1);
+}
 
 main();
 function main()
 {
+    $allArticles = getAllArticle('node');
+    sort($allArticles);
+    var_dump($allArticles);
+    generateSideBar($allArticles, "./");
+    
+    return;
     $emojis = getAllEmoji();
 
     $paths = array(
@@ -104,6 +163,7 @@ function main()
 
 
     foreach ($paths as $path) {
-      generateNavBar($allTags, $path);
+    //   generateNavBar($allTags, $path);
+    generateSideBar(1,2,"");
   }
 }
