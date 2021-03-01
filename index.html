@@ -24,6 +24,10 @@
 
       // basePath: './',
 
+      logo: '/_media/icon.png',
+
+      name: 'docsify',
+
       alias: {
         // '/foo/(.*)': '/bar/$1', // supports regexp
         // '/zh-cn/changelog': '/changelog',
@@ -31,6 +35,25 @@
         // 'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG',
         '/.*/_sidebar.md': '/_sidebar.md', // See #301
         },
+
+
+        // markdown-object
+        // markdown: {
+        //   smartypants: true,
+        //   renderer: {
+        //     link: function() {},
+        //   }
+        // },
+        // markdown: function(marked, renderer) {
+        //   return marked;
+        // },
+
+        formatUpdated: '{MM}/{DD} {HH}:{mm}',
+        formatUpdated: function(time) {
+          return time;
+        },
+        
+  
     }
   </script>
   <!-- Docsify v4 -->
