@@ -88,6 +88,7 @@ function main()
 
     $paths = array(
       "node/001",
+      "node/002",
     );
     $allTags = array();
     foreach ($paths as $path) {
