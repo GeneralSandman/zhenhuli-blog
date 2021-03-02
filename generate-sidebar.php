@@ -15,9 +15,54 @@ function get_allfiles($path, &$files)
         $files[] =  $path;
     }
 }
+$ignoreFiles = array(
+    ".gitignore",
+    ".git",
+);
 
-function parseAllTagFiles($path) {
-    
+function dfsDir($pathName)
+{
+    global $ignoreFiles;
+    //将结果保存在result变量中
+    $result = array();
+    $temp = array();
+    //判断传入的变量是否是目录
+    if (!is_dir($pathName) || !is_readable($pathName)) {
+        return null;
+    }
+    //取出目录中的文件和子目录名,使用scandir函数
+    $allFiles = scandir($pathName);
+    //遍历他们
+    foreach ($allFiles as $fileName) {
+        //判断是否是.和..因为这两个东西神马也不是。。。
+        if (in_array($fileName, array('.', '..'))) {
+            continue;
+        }
+        if (in_array($fileName, $ignoreFiles)) {
+            continue;
+        }
+        //路径加文件名
+        $fullName = $pathName.'/'.$fileName;
+        //如果是目录的话就继续遍历这个目录
+        if (is_dir($fullName)) {
+            //将这个目录中的文件信息存入到数组中
+            $result[$fullName] = dfsDir($fullName);
+        } else {
+            //如果是文件就先存入临时变量
+            $temp[] = $fullName;
+        }
+    }
+    //取出文件
+    if ($temp) {
+        foreach ($temp as $f) {
+            $result[] = $f;
+        }
+    }
+    return $result;
+}
+
+function parseAllTagFiles($path)
+{
 }
 
 function get_filenamesbydir($dir)
@@ -26,6 +71,7 @@ function get_filenamesbydir($dir)
     get_allfiles($dir, $files);
     return $files;
 }
+
 
 function path_join($base, $path)
 {
@@ -72,7 +118,7 @@ function generateSideBar($allArticles, $path, $navbarFile="_sidebar.md")
     $file = path_join($path, $navbarFile);
     $contents = "";
 
-    foreach($allArticles as $article)  {
+    foreach ($allArticles as $article) {
         $title = parseTitleFromFileName($article);
         $contents .= sprintf("* [%s](%s)\n", $title, $article);
     }
@@ -97,16 +143,19 @@ function getConfigEmojis($file="_emoji.md")
     fclose($fp);
     return $emojis;
 }
-function startsWith(string $string, string $subString) : bool{
+function startsWith(string $string, string $subString) : bool
+{
     return substr($string, 0, strlen($subString)) === $subString;
     // 或者 strpos($s2, $s1) === 0
 }
 
-function endsWith(string $string, String $subString) : bool{
+function endsWith(string $string, String $subString) : bool
+{
     return substr($string, strpos($string, $subString)) === $subString;
 }
 
-function getAllArticle($path) {
+function getAllArticle($path)
+{
     $allArticles = array();
 
     $ignoreFiles = array(
@@ -117,8 +166,8 @@ function getAllArticle($path) {
     foreach ($filenames as $fileName) {
         if (endsWith($fileName, ".md")) {
             $findIgnore = false;
-            foreach($ignoreFiles as $ignoreFile) {
-                if(endsWith($fileName,$ignoreFile)) {
+            foreach ($ignoreFiles as $ignoreFile) {
+                if (endsWith($fileName, $ignoreFile)) {
                     $findIgnore = true;
                     break;
                 }
@@ -131,7 +180,8 @@ function getAllArticle($path) {
     return $allArticles;
 }
 
-function parseTitleFromFileName($fileName) {
+function parseTitleFromFileName($fileName)
+{
     $pos1= strripos($fileName, "/");
     $pos2= strripos($fileName, ".md");
     $pos1 +=1;
@@ -140,13 +190,41 @@ function parseTitleFromFileName($fileName) {
 
 main();
 
-function main() {
+function main()
+{
+    
+    $dfs = function($files, $depth) use (&$dfs){
+        if ($depth >= 1) {
+            return;
+        }
+        $prefix = "";
+        for($i=0;$i<$depth;$i+=1) {
+            $prefix .= "  ";
+        }
+        $prefix .= "- ";
+
+        foreach($files as $key => $value) {
+            if(!is_array($value)) {
+                // 文件
+                echo "$prefix $value\n";
+            } else {
+                // 路径
+                echo "$prefix $key\n";
+                $dfs($value, $depth + 1);
+            }
+        }
+    };
+
+    $files = dfsDir("ci-documents");
+    $files['ci-documents'] = $files;
+    $depth = 0;
+    $dfs($files, $depth);
+    return;
     $tagToArticlesMap = array();
     $articleToTagsMap = array();
 
     echo "-------\n";
     var_dump(get_filenamesbydir("node"));
-
 }
 
 // main_();
@@ -178,7 +256,7 @@ function main_()
 
 
     foreach ($paths as $path) {
-    //   generateNavBar($allTags, $path);
-    generateSideBar(1,2,"");
-  }
+        //   generateNavBar($allTags, $path);
+        generateSideBar(1, 2, "");
+    }
 }

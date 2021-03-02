@@ -15,8 +15,20 @@
       name: '三七商社',
       repo: '',
       loadSidebar: true,
-      subMaxLevel: 1,
+      subMaxLevel: 3,
       hideSidebar: false,
+
+      search: {
+        maxAge: 86400000,
+        paths: [],
+        placeholder: 'Type to search',
+        noData: 'No Results!',
+        depth: 2,
+      },
+
+      externalLinkTarget: '_blank',
+
+      disqus: 'shortname',
 
       loadNavbar: true,
       auto2top: true,
@@ -33,7 +45,7 @@
         // '/zh-cn/changelog': '/changelog',
         // '/changelog':
         // 'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG',
-        '/.*/_sidebar.md': '/_sidebar.md', // See #301
+        //'/.*/_sidebar.md': '/_sidebar.md', // See #301
         },
 
 
@@ -59,5 +71,8 @@
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  
 </body>
 </html>
