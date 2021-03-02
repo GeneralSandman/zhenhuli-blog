@@ -18,6 +18,10 @@ function get_allfiles($path, &$files)
 $ignoreFiles = array(
     ".gitignore",
     ".git",
+    ".DS_Store",
+    "_tag.md",
+    "_sidebar.md",
+    "_navbar.md",
 );
 
 function dfsDir($pathName)
@@ -71,7 +75,6 @@ function get_filenamesbydir($dir)
     get_allfiles($dir, $files);
     return $files;
 }
-
 
 function path_join($base, $path)
 {
@@ -184,6 +187,9 @@ function parseTitleFromFileName($fileName)
 {
     $pos1= strripos($fileName, "/");
     $pos2= strripos($fileName, ".md");
+    if(!$pos1 || !$pos2) {
+        return "";
+    }
     $pos1 +=1;
     return substr($fileName, $pos1, $pos2-$pos1);
 }
@@ -195,7 +201,7 @@ function main()
     
     $dfs = function($files, $depth) use (&$dfs){
         if ($depth >= 1) {
-            return;
+            // return;
         }
         $prefix = "";
         for($i=0;$i<$depth;$i+=1) {
@@ -206,17 +212,21 @@ function main()
         foreach($files as $key => $value) {
             if(!is_array($value)) {
                 // 文件
-                echo "$prefix $value\n";
+                $title = parseTitleFromFileName($value);
+                if ($title) {
+                    // echo "$prefix $value $title\n";
+                    $s = sprintf("* [%s](%s)\n\n", $title, $value);
+                    echo "$s";
+                }
             } else {
                 // 路径
-                echo "$prefix $key\n";
+                // echo "$prefix $key\n";
                 $dfs($value, $depth + 1);
             }
         }
     };
 
-    $files = dfsDir("ci-documents");
-    $files['ci-documents'] = $files;
+    $files = dfsDir("node");
     $depth = 0;
     $dfs($files, $depth);
     return;
