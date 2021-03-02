@@ -16,6 +16,10 @@ function get_allfiles($path, &$files)
     }
 }
 
+function parseAllTagFiles($path) {
+    
+}
+
 function get_filenamesbydir($dir)
 {
     $files =  array();
@@ -28,7 +32,7 @@ function path_join($base, $path)
     return rtrim($base, '/') . '/' . ltrim($path, '/');
 }
 
-function parseSidebar($path, $tagFile = "_tag.md")
+function parseTagFile($path, $tagFile = "_tag.md")
 {
     $file = path_join($path, $tagFile);
     $fp = fopen($file, 'r');
@@ -76,7 +80,7 @@ function generateSideBar($allArticles, $path, $navbarFile="_sidebar.md")
     file_put_contents($file, $contents);
 }
 
-function getAllEmoji($file="_emoji.md")
+function getConfigEmojis($file="_emoji.md")
 {
     $emojis = array();
     $fp = fopen($file, 'r');
@@ -135,7 +139,18 @@ function parseTitleFromFileName($fileName) {
 }
 
 main();
-function main()
+
+function main() {
+    $tagToArticlesMap = array();
+    $articleToTagsMap = array();
+
+    echo "-------\n";
+    var_dump(get_filenamesbydir("node"));
+
+}
+
+// main_();
+function main_()
 {
     $allArticles = getAllArticle('node');
     sort($allArticles);
@@ -143,7 +158,7 @@ function main()
     generateSideBar($allArticles, "./");
     
     return;
-    $emojis = getAllEmoji();
+    $emojis = getConfigEmojis();
 
     $paths = array(
       "node/001",
@@ -151,7 +166,7 @@ function main()
     );
     $allTags = array();
     foreach ($paths as $path) {
-        $tags = parseSidebar($path);
+        $tags = parseTagFile($path);
         $allTags = array_merge($allTags, $tags);
     }
 
