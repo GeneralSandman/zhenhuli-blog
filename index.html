@@ -60,6 +60,17 @@
         //   return marked;
         // },
 
+        markdown: {
+            renderer: {
+                // 图片居中
+                image: function(href, title, text) {
+                    var image_html = this.origin.image.apply(this, arguments)
+                    return '<figure>' + image_html + '<figcaption>' + text +
+                        '</figcaption></figure>'
+                }
+            }
+        },
+
         formatUpdated: '{MM}/{DD} {HH}:{mm}',
         formatUpdated: function(time) {
           return time;
@@ -74,5 +85,11 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
   
+  <style>
+  figure {
+      text-align: center
+      }
+  </style>
+
 </body>
 </html>
