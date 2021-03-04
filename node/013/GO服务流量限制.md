@@ -69,6 +69,6 @@ func main()  {
 
 ``` shell
 
-go mod init main && go build -o test ./limiter.go && ./test
+go mod init main && go limiter -o test ./limiter.go && ./limiter
 
 ```
