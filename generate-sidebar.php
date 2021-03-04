@@ -237,6 +237,22 @@ function main()
     var_dump(get_filenamesbydir("node"));
 }
 
+function generateDocToc($file) {
+    $shell = "doctoc $file";
+    exec($shell);
+}
+
+function generateSideBarAction() {
+
+}
+
+function main() {
+    generateSideBarAction();
+    // generateNavBarAction();
+    // generateTimeLineAction();
+    // generateTopArticlesAction();
+}
+
 // main_();
 function main_()
 {

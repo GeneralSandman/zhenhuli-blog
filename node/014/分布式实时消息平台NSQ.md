@@ -59,4 +59,47 @@ NSQ 由 3 个守护进程组成:
 
 
 
-http://km.oa.com/group/19368/articles/show/340990?kmref=search&from_page=1&no=1
+
+## 启动NSQ服务
+
+### 启动 nsqlookupd
+
+``` shell
+nsqlookupd
+``` 
+
+客户端通过查询 nsqlookupd 来发现指定topic的生产者，并且 nsqd 节点广播 topic 和通道 channel 信息
+该服务运行后有两个端口：TCP 接口，nsqd 用它来广播；HTTP 接口，客户端用它来发现和管理。
+在生产环境中，为了高可用，最好部署三个nsqlookupd服务。
+
+
+### 创建 nsqd 的数据路径
+
+``` shell
+mkdir /tmp/nsqdata1 /tmp/nsqdata2
+``` 
+
+### 运行两个测试的 nsqd 实例
+
+``` shell
+nsqd --lookupd-tcp-address=127.0.0.1:4160 -broadcast-address=127.0.0.1 -tcp-address=127.0.0.1:4150 -http-address=0.0.0.0:4151 -data-path=/tmp/nsqdata1
+
+nsqd --lookupd-tcp-address=127.0.0.1:4160 -broadcast-address=127.0.0.1 -tcp-address=127.0.0.1:4152 -http-address=0.0.0.0:4153 -data-path=/tmp/nsqdata2
+``` 
+
+nsqd 可以独立运行，不过通常它是由 nsqlookupd 实例所在集群配置的(它在这能声明 topics 和 channels ，以便大家能找到)
+服务启动后有两个端口：一个给客户端(TCP)，另一个是 HTTP API。还能够开启HTTPS。
+同一台服务器启动多个 nsqd ，要注意端口和数据路径必须不同，包括： –lookupd-tcp-address 、 -tcp-address 、 –data-path 。
+删除topic、channel需要HTTP API调用。
+
+### 启动 nsqadmin 前端Web监控
+
+``` shell
+nsqadmin --lookupd-http-address=localhost:4161
+``` 
+
+nsqadmin 是一套 WEB UI ，用来汇集集群的实时统计，并执行不同的管理任务。
+运行后，能够通过4171端口查看并管理 topic 和 channel 。
+nsqadmin 通常只需要运行一个。
+
+## 使用NSQ
