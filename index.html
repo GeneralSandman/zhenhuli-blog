@@ -18,6 +18,8 @@
       subMaxLevel: 0,
       hideSidebar: false,
 
+      
+
       search: {
         maxAge: 86400000,
         paths: [],
@@ -40,13 +42,10 @@
 
       name: 'docsify',
 
+      topMargin: 2,
+
       alias: {
-        // '/foo/(.*)': '/bar/$1', // supports regexp
-        // '/zh-cn/changelog': '/changelog',
-        // '/changelog':
-        // 'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG',
-        //'/.*/_sidebar.md': '/_sidebar.md', // See #301
-        },
+      },
 
 
         // markdown-object
@@ -75,8 +74,23 @@
         formatUpdated: function(time) {
           return time;
         },
-        
-  
+
+
+        plugins: [
+          function(hook, vm) {
+            hook.beforeEach(function(html) {
+              var editHtml = '';
+              return (editHtml + html + '\n----\n' + 'Last modified {docsify-updated} ' + editHtml);
+              });
+          }
+        ],
+
+        count:{
+          countable:true,
+          fontsize:'0.9em',
+          color:'rgb(90,90,90)',
+          language:'chinese'
+        }
     }
   </script>
   <!-- Docsify v4 -->
@@ -86,7 +100,11 @@
   <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.js"></script>
-  
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+
+
   <style>
   figure {
       text-align: center
