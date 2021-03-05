@@ -86,7 +86,7 @@ function parseTagFile($path, $tagFile = "_tag.md")
     $file = path_join($path, $tagFile);
     $fp = fopen($file, 'r');
     if (false == $fp) {
-        return;
+        return array();
     }
     while (! feof($fp)) {
         $line = trim(fgets($fp));
@@ -96,22 +96,18 @@ function parseTagFile($path, $tagFile = "_tag.md")
 
     return $tags;
 }
-// test();
-function test()
-{
-    $filenames = get_filenamesbydir('node');
-    foreach ($filenames as $value) {
-        echo $value . "\n";
-    }
-}
+
 
 function generateNavBar($tags, $path, $navbarFile="_navbar.md")
 {
     $file = path_join($path, $navbarFile);
     $contents = "";
 
+    $emojis = getConfigEmojis();
+
     foreach ($tags as $tag) {
-        $contents .= sprintf("* [%s]()\n", $tag);
+        $emoji = $emojis[rand(0, count($emojis))];
+        $contents .= sprintf("* [%s %s]()\n", $tag, $emoji);
     }
     file_put_contents($file, $contents);
 }
@@ -194,12 +190,17 @@ function parseTitleFromFileName($fileName)
     return substr($fileName, $pos1, $pos2-$pos1);
 }
 
-main();
 
-function main()
-{
-    
+function generateDocToc($file) {
+    $shell = "doctoc $file";
+    exec($shell);
+}
+
+function generateSideBarAction() {
+
     $dfs = function($files, $depth) use (&$dfs){
+        $contents = "";
+
         if ($depth >= 1) {
             // return;
         }
@@ -210,45 +211,91 @@ function main()
         $prefix .= "- ";
 
         foreach($files as $key => $value) {
+            $message = "";
             if(!is_array($value)) {
                 // 文件
                 $title = parseTitleFromFileName($value);
                 if ($title) {
-                    // echo "$prefix $value $title\n";
-                    $s = sprintf("* [%s](%s)\n\n", $title, $value);
-                    echo "$s";
+                    $message = sprintf("* [%s](%s)\n\n", $title, $value);
+                    // echo "---$message\n";
                 }
             } else {
                 // 路径
-                // echo "$prefix $key\n";
-                $dfs($value, $depth + 1);
+                $message = $dfs($value, $depth + 1);
             }
+            $contents = $contents . $message;
+            // echo "$message\n";
         }
+
+        return $contents;
+    };
+
+    $files = dfsDir("node");
+    $depth = 0;
+    $contents = $dfs($files, $depth);
+    file_put_contents("./_sidebar.md", $contents);
+    return;
+}
+
+function generateNavBarAction() {
+    $tagToArticlesMap = array();
+    $articleToTagsMap = array();
+
+    $dfs = function($files, $depth) use (&$dfs, &$tagToArticlesMap, &$articleToTagsMap){
+        // $contents = "";
+
+        if ($depth >= 1) {
+            // return;
+        }
+
+        foreach($files as $key => $value) {
+            $message = "";
+            if(!is_array($value)) {
+                // 文件
+            } else {
+                // 路径
+                // echo "$key\n";
+                $tags = parseTagFile($key);
+                $articleToTagsMap[$key] = $tags;
+                // $message = $dfs($value, $depth + 1);
+            }
+            // $contents = $contents . $message;
+            // echo "$message\n";
+        }
+
+        // return $contents;
     };
 
     $files = dfsDir("node");
     $depth = 0;
     $dfs($files, $depth);
+    foreach($articleToTagsMap as $article => $tags) {
+        foreach($tags as $tag) {
+            $tagToArticlesMap[$tag][] = $article;
+        }
+    }
+    var_dump($articleToTagsMap);
+
+    foreach($articleToTagsMap as $path => $tags) {
+        generateNavBar($tags, $path);
+    }
+
+    // file_put_contents("./_sidebar.md", $contents);
     return;
-    $tagToArticlesMap = array();
-    $articleToTagsMap = array();
-
-    echo "-------\n";
-    var_dump(get_filenamesbydir("node"));
 }
 
-function generateDocToc($file) {
-    $shell = "doctoc $file";
-    exec($shell);
-}
-
-function generateSideBarAction() {
+function generateTimeLineAction() {
 
 }
 
+function generateTopArticlesAction() {
+
+}
+
+main();
 function main() {
     generateSideBarAction();
-    // generateNavBarAction();
+    generateNavBarAction();
     // generateTimeLineAction();
     // generateTopArticlesAction();
 }
@@ -262,7 +309,6 @@ function main_()
     generateSideBar($allArticles, "./");
     
     return;
-    $emojis = getConfigEmojis();
 
     $paths = array(
       "node/001",
@@ -275,7 +321,6 @@ function main_()
     }
 
     for ($i=0;$i<count($allTags);$i+=1) {
-        $emoji = $emojis[rand(0, count($emojis))];
         $allTags[$i] = sprintf("%s %s", $allTags[$i], $emoji);
     }
 
