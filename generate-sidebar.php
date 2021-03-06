@@ -98,18 +98,9 @@ function parseTagFile($path, $tagFile = "_tag.md")
 }
 
 
-function generateNavBar($tags, $path, $navbarFile="_navbar.md")
+function generateNavBar($tagToArticlesMap, $titleToArticleMap, $tags, $path, $navbarFile="_navbar.md")
 {
-    $file = path_join($path, $navbarFile);
-    $contents = "";
-
-    $emojis = getConfigEmojis();
-
-    foreach ($tags as $tag) {
-        $emoji = $emojis[rand(0, count($emojis))];
-        $contents .= sprintf("* [%s %s]()\n", $tag, $emoji);
-    }
-    file_put_contents($file, $contents);
+    
 }
 
 function generateSideBar($allArticles, $path, $navbarFile="_sidebar.md")
@@ -240,47 +231,59 @@ function generateSideBarAction() {
 function generateNavBarAction() {
     $tagToArticlesMap = array();
     $articleToTagsMap = array();
+    $titleToArticleMap = array();
 
-    $dfs = function($files, $depth) use (&$dfs, &$tagToArticlesMap, &$articleToTagsMap){
-        // $contents = "";
+    $dfs = function($files, $depth) use (&$dfs, &$tagToArticlesMap, &$articleToTagsMap, &$titleToArticleMap){
 
         if ($depth >= 1) {
             // return;
         }
 
         foreach($files as $key => $value) {
-            $message = "";
             if(!is_array($value)) {
-                // 文件
+                $title = parseTitleFromFileName($value);
+                if ($title) {
+                    $titleToArticleMap[$title] = $value;
+                }
             } else {
-                // 路径
-                // echo "$key\n";
                 $tags = parseTagFile($key);
                 $articleToTagsMap[$key] = $tags;
-                // $message = $dfs($value, $depth + 1);
+                $dfs($value, $depth+1);
             }
-            // $contents = $contents . $message;
-            // echo "$message\n";
         }
-
-        // return $contents;
     };
+
 
     $files = dfsDir("node");
     $depth = 0;
     $dfs($files, $depth);
+
+    // var_dump($articleToTagsMap);
+    // var_dump($titleToArticleMap);
+
+
     foreach($articleToTagsMap as $article => $tags) {
         foreach($tags as $tag) {
             $tagToArticlesMap[$tag][] = $article;
         }
     }
-    var_dump($articleToTagsMap);
 
     foreach($articleToTagsMap as $path => $tags) {
-        generateNavBar($tags, $path);
+        $navbarFile="_navbar.md";
+        $file = path_join($path, $navbarFile);
+        $contents = "";
+        $emojis = getConfigEmojis();
+        foreach ($tags as $tag) {
+            $emoji = $emojis[rand(0, count($emojis))];
+            $contents .= sprintf("* [%s %s]()\n", $tag, $emoji);
+            $paths = $tagToArticlesMap[$tag];
+            foreach($paths as $path) {
+                $contents .= sprintf("  * [%s]()\n", $path);
+            }
+        }
+        file_put_contents($file, $contents);
     }
 
-    // file_put_contents("./_sidebar.md", $contents);
     return;
 }
 
