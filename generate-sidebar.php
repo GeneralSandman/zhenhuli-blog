@@ -228,24 +228,29 @@ function generateSideBarAction() {
     return;
 }
 
+class Article {
+    public $dir;
+    public $path;
+    public $title;
+    public $tags;
+}
+
 function generateNavBarAction() {
-    $tagToArticlesMap = array();
-    $articleToTagsMap = array();
-    $titleToArticleMap = array();
 
-    $dfs = function($files, $depth) use (&$dfs, &$tagToArticlesMap, &$articleToTagsMap, &$titleToArticleMap){
-
+    $pathToArticlesMap = array();
+    $dfs = function($files, $depth) use (&$dfs, &$pathToArticlesMap){
         if ($depth >= 1) {
             // return;
         }
-
         foreach($files as $key => $value) {
             if(!is_array($value)) {
+                // file
                 $title = parseTitleFromFileName($value);
                 if ($title) {
                     $titleToArticleMap[$title] = $value;
                 }
             } else {
+                // dir
                 $tags = parseTagFile($key);
                 $articleToTagsMap[$key] = $tags;
                 $dfs($value, $depth+1);
@@ -258,7 +263,8 @@ function generateNavBarAction() {
     $depth = 0;
     $dfs($files, $depth);
 
-    // var_dump($articleToTagsMap);
+    var_dump($articleToTagsMap);
+    return;
     // var_dump($titleToArticleMap);
 
 
@@ -278,7 +284,7 @@ function generateNavBarAction() {
             $contents .= sprintf("* [%s %s]()\n", $tag, $emoji);
             $paths = $tagToArticlesMap[$tag];
             foreach($paths as $path) {
-                $contents .= sprintf("  * [%s]()\n", $path);
+                $contents .= sprintf("  * [%s](%s)\n", $article, $articleUrl);
             }
         }
         file_put_contents($file, $contents);
