@@ -231,6 +231,7 @@ function generateSideBarAction()
 
 
     $sideBarContents = "";
+    array_multisort(array_column($articleMap,'dir'),SORT_DESC,$articleMap);
     foreach($articleMap as $title => $article) {
         $sideBarContents .= sprintf("* [%s](%s)\n\n", $title, $article['file']);
     }
