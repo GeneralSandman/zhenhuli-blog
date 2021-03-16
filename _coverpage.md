@@ -1,10 +1,11 @@
-<!-- _coverpage.md -->
-
-![](_media/icon.png)
-
-# 三七商社 <small>0.0.0.1</small>
-
-> 一个神奇的商社网站
+# Sunnie’s Blog
+## 技术改变世界
+前端笔记 | 运动生活 | 技术博客
 
 
-[Get Started](readme/) 
+
+[<i class="iconfont icon-github"></i> GitHub](https://github.com/sunniejs/blog)
+[马上开始 <i class="iconfont icon-down"></i>](#main)
+
+<!-- background image -->
+![](https://www.sunniejs.cn/static/wx/bg.jpg)
