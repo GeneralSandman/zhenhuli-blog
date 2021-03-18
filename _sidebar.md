@@ -1,5 +1,9 @@
 * [test](node/099/test.md)
 
+* [Doctify-Alerts](node/026/Doctify-Alerts.md)
+
+* [一文精通MYSQL](node/024/一文精通MYSQL.md)
+
 * [美团万亿级KV存储架构与实践](node/023/美团万亿级KV存储架构与实践.md)
 
 * [写给工程师的十条精进原则](node/022/写给工程师的十条精进原则.md)

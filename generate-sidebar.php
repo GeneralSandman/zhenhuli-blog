@@ -244,12 +244,12 @@ function generateSideBarAction()
             $tagToArticlesMap[$tag][] = $article;
         }
     }
-    var_dump($tagToArticlesMap);
+    // var_dump($tagToArticlesMap);
 
 
     $allTagsContents = "";
     foreach($tagToArticlesMap as $tag => $articles) {
-        $allTagsContents .= sprintf("* ## [%s](/tags.md)\n\n", $tag);
+        $allTagsContents .= sprintf("* ## %s\n\n", $tag);
         foreach($articles as $article) {
             $allTagsContents .= sprintf("   * [%s](%s)\n\n", $article['title'], $article['file']);
         }
@@ -270,7 +270,7 @@ function generateSideBarAction()
         $emojis = getConfigEmojis();
         var_dump($article);
 
-        var_dump($article['tag']);
+        // var_dump($article['tag']);
         foreach($article['tags'] as $tag) {
             $articles = $tagToArticlesMap[$tag];
 
@@ -281,7 +281,7 @@ function generateSideBarAction()
             }
         }
         echo "$contents\n-----------------\n";
-        $navbarFile = path_join($article['dir'], "_navbar.md");
+        $navbarFile = path_join($article['dir'], "/_navbar.md");
         file_put_contents($navbarFile, $contents);
     }
 

@@ -1,7 +1,7 @@
-* [DMQ 🍎](/tags.md)
+* [DMQ 🐛](/tags.md)
    * [DMQ开发计划](node/004/DMQ开发计划.md)
 
-* [消息队列 👣](/tags.md)
+* [消息队列 ⬇️](/tags.md)
    * [NSQ重塑之详细设计](node/020/NSQ重塑之详细设计.md)
 
    * [分布式实时消息平台NSQ](node/014/分布式实时消息平台NSQ.md)
@@ -12,7 +12,9 @@
 
    * [DMQ开发计划](node/004/DMQ开发计划.md)
 
-* [中间件 🏮](/tags.md)
+* [中间件 🛀](/tags.md)
+   * [美团万亿级KV存储架构与实践](node/023/美团万亿级KV存储架构与实践.md)
+
    * [NSQ重塑之详细设计](node/020/NSQ重塑之详细设计.md)
 
    * [分布式实时消息平台NSQ](node/014/分布式实时消息平台NSQ.md)
