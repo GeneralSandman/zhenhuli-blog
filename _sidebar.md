@@ -1,6 +1,10 @@
 * [test](node/099/test.md)
 
+* [Kafka入门介绍](node/027/Kafka入门介绍.md)
+
 * [Doctify-Alerts](node/026/Doctify-Alerts.md)
+
+* [震惊！Python的requests库竟然有这么异想不到的表现](node/025/震惊！Python的requests库竟然有这么异想不到的表现.md)
 
 * [一文精通MYSQL](node/024/一文精通MYSQL.md)
 

@@ -4,21 +4,13 @@
 
    * [写给工程师的十条精进原则](node/022/写给工程师的十条精进原则.md)
 
-* ## Doctify插件
+* ## Kfaka
 
-   * [Doctify-Alerts](node/026/Doctify-Alerts.md)
+   * [Kafka入门介绍](node/027/Kafka入门介绍.md)
 
-* ## 博客
+* ## 消息队列
 
-   * [Doctify-Alerts](node/026/Doctify-Alerts.md)
-
-* ## MySQL
-
-   * [一文精通MYSQL](node/024/一文精通MYSQL.md)
-
-* ## 分布式
-
-   * [美团万亿级KV存储架构与实践](node/023/美团万亿级KV存储架构与实践.md)
+   * [Kafka入门介绍](node/027/Kafka入门介绍.md)
 
    * [NSQ重塑之详细设计](node/020/NSQ重塑之详细设计.md)
 
@@ -26,7 +18,13 @@
 
    * [分布式队列编程：模型、实战](node/009/分布式队列编程：模型、实战.md)
 
+   * [Nsq-Learn](node/007/Nsq-Learn.md)
+
+   * [DMQ开发计划](node/004/DMQ开发计划.md)
+
 * ## 中间件
+
+   * [Kafka入门介绍](node/027/Kafka入门介绍.md)
 
    * [美团万亿级KV存储架构与实践](node/023/美团万亿级KV存储架构与实践.md)
 
@@ -37,6 +35,52 @@
    * [Nsq-Learn](node/007/Nsq-Learn.md)
 
    * [DMQ开发计划](node/004/DMQ开发计划.md)
+
+* ## 分布式
+
+   * [Kafka入门介绍](node/027/Kafka入门介绍.md)
+
+   * [美团万亿级KV存储架构与实践](node/023/美团万亿级KV存储架构与实践.md)
+
+   * [NSQ重塑之详细设计](node/020/NSQ重塑之详细设计.md)
+
+   * [分布式实时消息平台NSQ](node/014/分布式实时消息平台NSQ.md)
+
+   * [分布式队列编程：模型、实战](node/009/分布式队列编程：模型、实战.md)
+
+* ## Doctify插件
+
+   * [Doctify-Alerts](node/026/Doctify-Alerts.md)
+
+* ## 博客
+
+   * [Doctify-Alerts](node/026/Doctify-Alerts.md)
+
+* ## Python
+
+   * [震惊！Python的requests库竟然有这么异想不到的表现](node/025/震惊！Python的requests库竟然有这么异想不到的表现.md)
+
+* ## 编程
+
+   * [震惊！Python的requests库竟然有这么异想不到的表现](node/025/震惊！Python的requests库竟然有这么异想不到的表现.md)
+
+   * [Go语言学习路线](node/021/Go语言学习路线.md)
+
+   * [GO服务流量限制](node/013/GO服务流量限制.md)
+
+   * [从Bug中学习：六大开源项目告诉你Go并发编程的那些坑](node/011/从Bug中学习：六大开源项目告诉你Go并发编程的那些坑.md)
+
+   * [使用Go协程+Channel，让你的代码飞起来](node/010/使用Go协程+Channel，让你的代码飞起来.md)
+
+   * [Go-Ratelimit-服务流量限制](node/006/Go-Ratelimit-服务流量限制.md)
+
+* ## Http
+
+   * [震惊！Python的requests库竟然有这么异想不到的表现](node/025/震惊！Python的requests库竟然有这么异想不到的表现.md)
+
+* ## MySQL
+
+   * [一文精通MYSQL](node/024/一文精通MYSQL.md)
 
 * ## Redis
 
@@ -62,33 +106,9 @@
 
    * [Go-Ratelimit-服务流量限制](node/006/Go-Ratelimit-服务流量限制.md)
 
-* ## 编程
-
-   * [Go语言学习路线](node/021/Go语言学习路线.md)
-
-   * [GO服务流量限制](node/013/GO服务流量限制.md)
-
-   * [从Bug中学习：六大开源项目告诉你Go并发编程的那些坑](node/011/从Bug中学习：六大开源项目告诉你Go并发编程的那些坑.md)
-
-   * [使用Go协程+Channel，让你的代码飞起来](node/010/使用Go协程+Channel，让你的代码飞起来.md)
-
-   * [Go-Ratelimit-服务流量限制](node/006/Go-Ratelimit-服务流量限制.md)
-
 * ## Nsq
 
    * [NSQ重塑之详细设计](node/020/NSQ重塑之详细设计.md)
-
-* ## 消息队列
-
-   * [NSQ重塑之详细设计](node/020/NSQ重塑之详细设计.md)
-
-   * [分布式实时消息平台NSQ](node/014/分布式实时消息平台NSQ.md)
-
-   * [分布式队列编程：模型、实战](node/009/分布式队列编程：模型、实战.md)
-
-   * [Nsq-Learn](node/007/Nsq-Learn.md)
-
-   * [DMQ开发计划](node/004/DMQ开发计划.md)
 
 * ## Etcd
 
