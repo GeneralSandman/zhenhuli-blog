@@ -262,13 +262,15 @@ function generateSideBarAction()
     foreach ($articleMap as $title => $article) {
         // echo "$contents\n-----------------\n";
         $sidebarFile = path_join($article['dir'], "/_sidebar.md");
-        file_put_contents($sidebarFile, $sidebarContents);
+        // file_put_contents($sidebarFile, $sidebarContents);
     }
+    file_put_contents("node/_sidebar.md", $sidebarContents);
+
 
     // 在根目录下生成一个大的归类sidebar
-    $rootSidebarContents = "* [快速浏览所有文章](/node/099/如何快速用docsify写一篇文章及各种工具插件.md)\n";
-    $rootSidebarContents .= "* [文章存档](/arch.md)\n";
-    $rootSidebarContents .= "* [文章分类](/tags.md)\n";
+    $rootSidebarContents = "* [⚡  快速浏览](/node/099/如何快速用docsify写一篇文章及各种工具插件.md)\n";
+    $rootSidebarContents .= "* [💻  文章存档](/arch.md)\n";
+    $rootSidebarContents .= "* [📎  文章分类](/tags.md)\n";
     file_put_contents("_sidebar.md", $rootSidebarContents);
     
 
