@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Shanghai');
 
 function get_allfiles($path, &$files)
 {
@@ -22,6 +23,7 @@ $ignoreFiles = array(
     "_tag.md",
     "_sidebar.md",
     "_navbar.md",
+    "_summary.md",
 );
 
 function dfsDir($pathName)
@@ -83,6 +85,7 @@ function path_join($base, $path)
 
 function parseTagFile($path, $tagFile = "_tag.md")
 {
+    $tags = array();
     $file = path_join($path, $tagFile);
     $fp = fopen($file, 'r');
     if (false == $fp) {
@@ -95,6 +98,22 @@ function parseTagFile($path, $tagFile = "_tag.md")
     fclose($fp);
 
     return $tags;
+}
+
+function parseSummaryFile($path, $tagFile = "_summary.md")
+{
+    $summaryContent = "";
+    $file = path_join($path, $tagFile);
+    $fp = fopen($file, 'r');
+    if (false == $fp) {
+        return "this is just a summary";
+    }
+    while (! feof($fp)) {
+        $summaryContent .= trim(fgets($fp));
+    }
+    fclose($fp);
+
+    return $summaryContent;
 }
 
 
@@ -180,6 +199,11 @@ function parseTitleFromFileName($fileName)
     return substr($fileName, $pos1, $pos2-$pos1);
 }
 
+function parseLastModifiedFromFile($fileName)
+{
+    return date("F d Y H:i:s.",filemtime($fileName));
+}
+
 
 function generateDocToc($file)
 {
@@ -200,42 +224,53 @@ function generateSideBarAction()
     $paths = dfsDir("node");
     foreach ($paths as $path => $files) {
         
-
         $articleFile = "";
         $articleTitle = "";
         $articleTags = array();
-
-
         $articleTags = parseTagFile($path);
+        $articleSummary = parseSummaryFile($path);
 
         
         foreach ($files as $file) {
             $articleTitle = parseTitleFromFileName($file);
             if ($articleTitle) {
                 $articleFile = $file;
+                $lastModified = parseLastModifiedFromFile($file);
                 break;
             }
         }
-
 
         $articleMap[$articleTitle] = array(
             'title' => $articleTitle,
             'file' => $articleFile,
             'dir' => $path,
             'tags' => $articleTags,
+            'summary' => $articleSummary,
+            'lastModified' => $lastModified,
         );
-        
 
     }
-    var_dump($articleMap);
+    // var_dump($articleMap);
 
 
-    $sideBarContents = "";
+    // 在文章目录下面生成全量文章的sidebar
+    $sidebarContents = "";
     array_multisort(array_column($articleMap,'dir'),SORT_DESC,$articleMap);
     foreach($articleMap as $title => $article) {
-        $sideBarContents .= sprintf("* [%s](%s)\n\n", $title, $article['file']);
+        $sidebarContents .= sprintf("* [%s](%s)\n\n", $title, $article['file']);
     }
-    file_put_contents("./_sidebar.md", $sideBarContents);
+    foreach ($articleMap as $title => $article) {
+        // echo "$contents\n-----------------\n";
+        $sidebarFile = path_join($article['dir'], "/_sidebar.md");
+        file_put_contents($sidebarFile, $sidebarContents);
+    }
+
+    // 在根目录下生成一个大的归类sidebar
+    $rootSidebarContents = "* [快速浏览所有文章](/node/099/如何快速用docsify写一篇文章及各种工具插件.md)\n";
+    $rootSidebarContents .= "* [文章存档](/arch.md)\n";
+    $rootSidebarContents .= "* [文章分类](/tags.md)\n";
+    file_put_contents("_sidebar.md", $rootSidebarContents);
+    
 
 
     $tagToArticlesMap = array();
@@ -247,6 +282,15 @@ function generateSideBarAction()
     // var_dump($tagToArticlesMap);
 
 
+    // 生成文章归档页面
+    $archContents = "# 文章存档\n\n";
+    foreach($articleMap as $title => $article) {
+        $archContents .= generateArticleArchInfo($article);
+    }
+    file_put_contents("./arch.md", $archContents);
+
+
+    // 生成tags页面
     $allTagsContents = "";
     foreach($tagToArticlesMap as $tag => $articles) {
         $allTagsContents .= sprintf("* ## %s\n\n", $tag);
@@ -257,18 +301,12 @@ function generateSideBarAction()
     file_put_contents("./tags.md", $allTagsContents);
 
 
-    $sideBarContents = "";
-    foreach($articleMap as $title => $article) {
-        $sideBarContents .= sprintf("* [%s](%s)\n\n", $title, $article['file']);
-    }
-    file_put_contents("./_sidebar.md", $sideBarContents);
-
-
+    // 在每篇文章的目录下生成自己的navbar
     foreach ($articleMap as $title => $article) {
 
         $contents = "";
         $emojis = getConfigEmojis();
-        var_dump($article);
+        // var_dump($article);
 
         // var_dump($article['tag']);
         foreach($article['tags'] as $tag) {
@@ -280,12 +318,32 @@ function generateSideBarAction()
                 $contents .= sprintf("   * [%s](%s)\n\n", $article['title'], $article['file']);
             }
         }
-        echo "$contents\n-----------------\n";
+        // echo "$contents\n-----------------\n";
         $navbarFile = path_join($article['dir'], "/_navbar.md");
         file_put_contents($navbarFile, $contents);
     }
 
+
+    
     return;
+}
+
+function generateArticleArchInfo($article) {
+
+    $tag_str = "";
+    foreach($article['tags'] as $tag) {
+        $tag_str .= sprintf("[%s]() ", $tag);
+    }
+    
+    $content = "";
+    $content .= sprintf("## %s\n\n", $article['title']);
+    $content .= sprintf("> [!ATTENTION|style:callout|label:摘要]\n> %s [阅读全文](%s)\n\n", $article['summary'], $article['file']);
+
+    $content .= sprintf("📌  %s\n\n", $tag_str);
+
+    $content .= sprintf("🗓  %s\n\n", $article['lastModified']);
+    $content .= "---\n\n";
+    return $content;
 }
 
 main();
@@ -295,15 +353,4 @@ function main()
     // generateNavBarAction();
     // generateTimeLineAction();
     // generateTopArticlesAction();
-}
-
-// main_();
-function main_()
-{
-    $allArticles = getAllArticle('node');
-    sort($allArticles);
-    var_dump($allArticles);
-    generateSideBar($allArticles, "./");
-    
-    return;
 }
