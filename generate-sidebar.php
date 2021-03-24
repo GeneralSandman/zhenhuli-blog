@@ -271,6 +271,7 @@ function generateSideBarAction()
     $rootSidebarContents = "* [⚡  快速浏览](/node/099/如何快速用docsify写一篇文章及各种工具插件.md)\n";
     $rootSidebarContents .= "* [💻  文章存档](/arch.md)\n";
     $rootSidebarContents .= "* [📎  文章分类](/tags.md)\n";
+    $rootSidebarContents .= "* [📎  精品外站](/blogs.md)\n";
     file_put_contents("_sidebar.md", $rootSidebarContents);
     
 
