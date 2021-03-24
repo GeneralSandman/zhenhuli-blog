@@ -314,7 +314,7 @@ function generateSideBarAction()
         foreach($article['tags'] as $tag) {
             $articles = $tagToArticlesMap[$tag];
 
-            $emoji = $emojis[hash('md4',$tag)%count($emojis)];
+            $emoji = $emojis[(int)hash('md4',$tag)%count($emojis)];
             $contents .= sprintf("* [%s %s](/tags.md)\n", $tag, $emoji);
             foreach($articles as $article) {
                 $contents .= sprintf("   * [%s](%s)\n\n", $article['title'], $article['file']);

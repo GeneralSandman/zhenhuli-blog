@@ -25,7 +25,7 @@
 ## 如何超过大多数人
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/029/如何超过大多数人.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/029/如何超过大多数人.md)
 
 📌  [职业发展]() 
 
@@ -36,7 +36,7 @@
 ## QUIC协议原理浅解
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/028/QUIC协议原理浅解.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/028/QUIC协议原理浅解.md)
 
 📌  [网络]() [Http]() [QUIC]() 
 
@@ -47,7 +47,7 @@
 ## Kafka入门介绍
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/027/Kafka入门介绍.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/027/Kafka入门介绍.md)
 
 📌  [Kfaka]() [消息队列]() [中间件]() [分布式]() 
 
@@ -58,7 +58,7 @@
 ## Doctify-Alerts
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/026/Doctify-Alerts.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/026/Doctify-Alerts.md)
 
 📌  [Doctify插件]() [博客]() 
 
@@ -69,7 +69,7 @@
 ## 震惊！Python的requests库竟然有这么异想不到的表现
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/025/震惊！Python的requests库竟然有这么异想不到的表现.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/025/震惊！Python的requests库竟然有这么异想不到的表现.md)
 
 📌  [Python]() [编程]() [Http]() 
 
@@ -80,7 +80,7 @@
 ## 一文精通MYSQL
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/024/一文精通MYSQL.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/024/一文精通MYSQL.md)
 
 📌  [MySQL]() 
 
@@ -91,7 +91,7 @@
 ## 美团万亿级KV存储架构与实践
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/023/美团万亿级KV存储架构与实践.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/023/美团万亿级KV存储架构与实践.md)
 
 📌  [分布式]() [中间件]() [Redis]() 
 
@@ -102,7 +102,7 @@
 ## 写给工程师的十条精进原则
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/022/写给工程师的十条精进原则.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/022/写给工程师的十条精进原则.md)
 
 📌  [职业发展]() 
 
@@ -113,7 +113,7 @@
 ## Go语言学习路线
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/021/Go语言学习路线.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/021/Go语言学习路线.md)
 
 📌  [Go]() [编程]() 
 
@@ -124,7 +124,7 @@
 ## NSQ重塑之详细设计
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/020/NSQ重塑之详细设计.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/020/NSQ重塑之详细设计.md)
 
 📌  [Nsq]() [消息队列]() [Etcd]() [中间件]() [分布式]() 
 
@@ -135,7 +135,7 @@
 ## 布谷鸟过滤器
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/019/布谷鸟过滤器.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/019/布谷鸟过滤器.md)
 
 📌  [Go]() [算法]() [哈希]() 
 
@@ -146,7 +146,7 @@
 ## 布隆过滤器
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/018/布隆过滤器.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/018/布隆过滤器.md)
 
 📌  [Go]() [算法]() [哈希]() 
 
@@ -157,7 +157,7 @@
 ## 探究！一个数据包在网络中的心路历程
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/017/探究！一个数据包在网络中的心路历程.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/017/探究！一个数据包在网络中的心路历程.md)
 
 📌  [网络]() [HTTP]() [TCP]() 
 
@@ -168,7 +168,7 @@
 ## 30张图了解TCP的头疼概念
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/016/30张图了解TCP的头疼概念.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/016/30张图了解TCP的头疼概念.md)
 
 📌  [网络]() [TCP]() 
 
@@ -179,7 +179,7 @@
 ## 分布式实时消息平台NSQ
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/014/分布式实时消息平台NSQ.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/014/分布式实时消息平台NSQ.md)
 
 📌  [NSQ]() [分布式]() [中间件]() [消息队列]() 
 
@@ -190,7 +190,7 @@
 ## GO服务流量限制
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/013/GO服务流量限制.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/013/GO服务流量限制.md)
 
 📌  [Go]() [流量控制]() [编程]() 
 
@@ -201,7 +201,7 @@
 ## QQ提醒一个大流量订阅推送系统的实现思路
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/012/QQ提醒一个大流量订阅推送系统的实现思路.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/012/QQ提醒一个大流量订阅推送系统的实现思路.md)
 
 📌  [架构]() [消息推送]() 
 
@@ -212,7 +212,7 @@
 ## 从Bug中学习：六大开源项目告诉你Go并发编程的那些坑
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/011/从Bug中学习：六大开源项目告诉你Go并发编程的那些坑.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/011/从Bug中学习：六大开源项目告诉你Go并发编程的那些坑.md)
 
 📌  [Go]() [编程]() 
 
@@ -223,7 +223,7 @@
 ## 使用Go协程+Channel，让你的代码飞起来
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/010/使用Go协程+Channel，让你的代码飞起来.md)
+> 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/010/使用Go协程+Channel，让你的代码飞起来.md)
 
 📌  [Go]() [编程]() 
 
@@ -234,7 +234,7 @@
 ## 分布式队列编程：模型、实战
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/009/分布式队列编程：模型、实战.md)
+> 文章首先从最基础的需求出发，详细剖析分布式队列编程模型的需求来源、定义、结构以及其变化多样性。通过这一部分的讲解，作者期望能在两方面帮助读者：* 一方面，提供一个系统性的思考方法，使读者能够将具体需求关联到分布式队列编程模型，具备进行分布式队列架构的能力；* 另一方面，通过全方位的讲解，让读者能够快速识别工作中碰到的各种分布式队列编程模型。 [阅读全文](node/009/分布式队列编程：模型、实战.md)
 
 📌  [消息队列]() [分布式]() [架构]() 
 
@@ -245,7 +245,7 @@
 ## Pprof
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/008/Pprof.md)
+> 随着时代的发展，编程语言对这些系统调用又进一步进行了封装，如今做应用层开发，几乎不会在程序中看到epoll之类的字眼，大多数时候我们就只要聚焦在业务逻辑上就好。Go 的 net 库针对不同平台封装了不同的syscall API，http库又是构建在net库之上，所以在Go语言中我们可以借助标准库，很轻松地写出高性能的http服务。 [阅读全文](node/008/Pprof.md)
 
 📌  [Go]() [Tool]() [性能调优]() 
 
@@ -256,7 +256,7 @@
 ## Nsq-Learn
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/007/Nsq-Learn.md)
+> 随着时代的发展，编程语言对这些系统调用又进一步进行了封装，如今做应用层开发，几乎不会在程序中看到epoll之类的字眼，大多数时候我们就只要聚焦在业务逻辑上就好。Go 的 net 库针对不同平台封装了不同的syscall API，http库又是构建在net库之上，所以在Go语言中我们可以借助标准库，很轻松地写出高性能的http服务。 [阅读全文](node/007/Nsq-Learn.md)
 
 📌  [NSQ]() [消息队列]() [中间件]() 
 
@@ -267,7 +267,7 @@
 ## Go-Ratelimit-服务流量限制
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/006/Go-Ratelimit-服务流量限制.md)
+> 随着时代的发展，编程语言对这些系统调用又进一步进行了封装，如今做应用层开发，几乎不会在程序中看到epoll之类的字眼，大多数时候我们就只要聚焦在业务逻辑上就好。Go 的 net 库针对不同平台封装了不同的syscall API，http库又是构建在net库之上，所以在Go语言中我们可以借助标准库，很轻松地写出高性能的http服务。 [阅读全文](node/006/Go-Ratelimit-服务流量限制.md)
 
 📌  [Go]() [流量控制]() [编程]() 
 
@@ -278,7 +278,7 @@
 ## 七牛云、阿里云-视频监控服务体验报告
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/005/七牛云、阿里云-视频监控服务体验报告.md)
+> 七牛云视频监控（qvs）是基于七牛云实时流网络和完善的视频处理技术，面向视频监控设备提供的音视频流接入、流式存储、分发、录制回放的服务。视频流接入云端后，可与七牛智能多媒体服务等产品集成，快速构建智能视频监控服务。 [阅读全文](node/005/七牛云、阿里云-视频监控服务体验报告.md)
 
 📌  [视频监控]() [阿里云]() [七牛云]() 
 
@@ -289,7 +289,7 @@
 ## DMQ开发计划
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/004/DMQ开发计划.md)
+> 想简单写一个消息队列，从哪里下嘴 [阅读全文](node/004/DMQ开发计划.md)
 
 📌  [DMQ]() [消息队列]() [中间件]() 
 
@@ -300,7 +300,7 @@
 ## cos-notify
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/003/cos-notify.md)
+> COS回调开发者信息 [阅读全文](node/003/cos-notify.md)
 
 📌  [COS]() [回调]() 
 
@@ -311,7 +311,7 @@
 ## Redis-Tool
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/002/Redis-Tool.md)
+> 如何快速查看Redis的链接数 [阅读全文](node/002/Redis-Tool.md)
 
 📌  [Redis]() [Tool]() 
 
@@ -322,7 +322,7 @@
 ## TCP拥塞控制
 
 > [!ATTENTION|style:callout|label:摘要]
-> this is just a summary [阅读全文](node/001/TCP拥塞控制.md)
+> TCP BBR（Bottleneck Bandwidth and Round-trip propagation time）是由Google设计，于2016年发布的拥塞算法。以往大部分拥塞算法是基于丢包来作为降低传输速率的信号，而BBR则基于模型主动探测。 [阅读全文](node/001/TCP拥塞控制.md)
 
 📌  [TCP]() [网络]() [BBR]() 
 

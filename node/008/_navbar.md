@@ -1,4 +1,4 @@
-* [Go 🌐](/tags.md)
+* [Go ♿](/tags.md)
    * [Go语言学习路线](node/021/Go语言学习路线.md)
 
    * [布谷鸟过滤器](node/019/布谷鸟过滤器.md)
@@ -15,11 +15,11 @@
 
    * [Go-Ratelimit-服务流量限制](node/006/Go-Ratelimit-服务流量限制.md)
 
-* [Tool 👷](/tags.md)
+* [Tool 👔](/tags.md)
    * [Pprof](node/008/Pprof.md)
 
    * [Redis-Tool](node/002/Redis-Tool.md)
 
-* [性能调优 👖](/tags.md)
+* [性能调优 🆕](/tags.md)
    * [Pprof](node/008/Pprof.md)
 
