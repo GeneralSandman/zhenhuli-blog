@@ -2,4 +2,7 @@
 * [💻  文章存档](/arch.md)
 * [📎  文章分类](/tags.md)
 * [👀  精品外站](/blogs.md)
-* [🌐 分享本站](/qrcode.md)
+* [🌐  分享本站](/qrcode.md)
+* [🧠  Book]()
+   * [设计数据密集型应用](/设计数据密集型应用_book/SUMMARY.md)
+   * [Go语言标准库](/The-Golang-Standard-Library-by-Example/README.md)

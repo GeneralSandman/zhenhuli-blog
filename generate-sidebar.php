@@ -272,7 +272,9 @@ function generateSideBarAction()
     $rootSidebarContents .= "* [💻  文章存档](/arch.md)\n";
     $rootSidebarContents .= "* [📎  文章分类](/tags.md)\n";
     $rootSidebarContents .= "* [👀  精品外站](/blogs.md)\n";
-    $rootSidebarContents .= "* [🌐 分享本站](/qrcode.md)\n";
+    $rootSidebarContents .= "* [🌐  分享本站](/qrcode.md)\n";
+    $rootSidebarContents .= "* [🧠  Book]()\n";
+    $rootSidebarContents .= "   * [设计数据密集型应用](/设计数据密集型应用_book/SUMMARY.md)\n";
     file_put_contents("_sidebar.md", $rootSidebarContents);
     
 
