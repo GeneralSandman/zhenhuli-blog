@@ -18,3 +18,4 @@
 ## 2048 小游戏
 
 https://xbeibeix.com/api/game/2048/
+

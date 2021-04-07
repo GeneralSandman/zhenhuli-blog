@@ -116,6 +116,23 @@ function parseSummaryFile($path, $tagFile = "_summary.md")
     return $summaryContent;
 }
 
+function getSolutionCode($path, $tagFile = "_summary.md")
+{
+    $summaryContent = "";
+    $file = path_join($path, $tagFile);
+    $fp = fopen($file, 'r');
+    if (false == $fp) {
+        return "this is just a code";
+    }
+    while (! feof($fp)) {
+        $summaryContent .= trim(fgets($fp));
+    }
+    fclose($fp);
+
+    return $summaryContent;
+}
+
+
 
 function generateNavBar($tagToArticlesMap, $titleToArticleMap, $tags, $path, $navbarFile="_navbar.md")
 {
@@ -216,6 +233,22 @@ class Article{
     public $dir;
     public $file;
     public $tags;
+}
+
+function generateLeetcodeAction() {
+    $articleMap = array();
+    $paths = dfsDir("leetcode");
+    foreach ($paths as $path => $files) {
+        $articleTags = array();
+        $articleTags = parseTagFile($path);
+
+        foreach(array("test.cpp", "test.go", "test.scala") as $codeFile) {
+            $codeContents = getSolutionCode($path, $codeFile);
+            var_dump($codeContents);
+        }
+
+    }
+    var_dump($articleMap);
 }
 
 function generateSideBarAction()
@@ -355,7 +388,8 @@ function generateArticleArchInfo($article) {
 main();
 function main()
 {
-    generateSideBarAction();
+    generateLeetcodeAction();
+    // generateSideBarAction();
     // generateNavBarAction();
     // generateTimeLineAction();
     // generateTopArticlesAction();
