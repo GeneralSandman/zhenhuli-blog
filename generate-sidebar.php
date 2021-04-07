@@ -276,7 +276,6 @@ function generateLeetcodeAction() {
     global $solutionContentPattern;
     $articleMap = array();
     $paths = dfsDir("leetcode");
-    var_dump($paths);
     foreach ($paths as $path => $files) {
 
         $question = getSolutionCode($path, "question.md");
@@ -287,7 +286,6 @@ function generateLeetcodeAction() {
 
         file_put_contents($path."/solution.md", $result);
     }
-    var_dump($articleMap);
 }
 
 function generateSideBarAction()
