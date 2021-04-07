@@ -37877,3 +37877,4 @@ file%3A%2F%2F%2FUsers%2Fzhenhuli%2Fprivate%2Fzhenhuli-blog%2Fleetcode%2F104%2Fte
 [0m2021.04.07 20:03:02 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/104/test.scala[0m
 4月 07, 2021 8:10:27 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 警告: Unmatched cancel notification for request id 832
+[0m2021.04.07 20:35:47 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/104/test.scala[0m

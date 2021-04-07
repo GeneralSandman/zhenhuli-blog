@@ -125,7 +125,7 @@ function getSolutionCode($path, $tagFile = "_summary.md")
         return "this is just a code";
     }
     while (! feof($fp)) {
-        $summaryContent .= trim(fgets($fp));
+        $summaryContent .= fgets($fp);
     }
     fclose($fp);
 
@@ -235,18 +235,57 @@ class Article{
     public $tags;
 }
 
+$solutionContentPattern = <<< solutionContentPattern
+
+
+# Leetcode
+
+%s
+
+<!-- tabs:start -->
+
+#### ** C++ **
+
+``` cpp
+
+%s
+
+```
+
+#### ** Go **
+
+``` go
+
+%s
+
+```
+
+#### ** Scala **
+
+``` scala
+
+%s
+
+```
+
+<!-- tabs:end -->
+
+solutionContentPattern;
+
 function generateLeetcodeAction() {
+    global $solutionContentPattern;
     $articleMap = array();
     $paths = dfsDir("leetcode");
+    var_dump($paths);
     foreach ($paths as $path => $files) {
-        $articleTags = array();
-        $articleTags = parseTagFile($path);
 
-        foreach(array("test.cpp", "test.go", "test.scala") as $codeFile) {
-            $codeContents = getSolutionCode($path, $codeFile);
-            var_dump($codeContents);
-        }
+        $question = getSolutionCode($path, "question.md");
+        $cppContents = getSolutionCode($path, "test.cpp");
+        $goContents = getSolutionCode($path, "test.go");
+        $scalaContents = getSolutionCode($path, "test.scala");
+        $result = sprintf($solutionContentPattern, $question, $cppContents, $goContents, $scalaContents);
 
+        file_put_contents($path."/solution.md", $result);
     }
     var_dump($articleMap);
 }
