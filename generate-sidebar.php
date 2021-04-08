@@ -284,7 +284,7 @@ function generateLeetcodeAction() {
         $scalaContents = getSolutionCode($path, "test.scala");
         $result = sprintf($solutionContentPattern, $question, $cppContents, $goContents, $scalaContents);
 
-        file_put_contents($path."/_solution.md", $result);
+        file_put_contents($path."/solution.md", $result);
     }
 }
 
