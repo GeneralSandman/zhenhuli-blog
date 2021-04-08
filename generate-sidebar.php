@@ -278,13 +278,13 @@ function generateLeetcodeAction() {
     $paths = dfsDir("leetcode");
     foreach ($paths as $path => $files) {
 
-        $question = getSolutionCode($path, "question.md");
+        $question = getSolutionCode($path, "_question.md");
         $cppContents = getSolutionCode($path, "test.cpp");
         $goContents = getSolutionCode($path, "test.go");
         $scalaContents = getSolutionCode($path, "test.scala");
         $result = sprintf($solutionContentPattern, $question, $cppContents, $goContents, $scalaContents);
 
-        file_put_contents($path."/solution.md", $result);
+        file_put_contents($path."/_solution.md", $result);
     }
 }
 
