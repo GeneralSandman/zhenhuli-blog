@@ -278,6 +278,9 @@ function generateLeetcodeAction() {
     $paths = dfsDir("leetcode");
     foreach ($paths as $path => $files) {
 
+        $articleTags = array();
+        $articleTags = parseTagFile($path);
+
         $question = getSolutionCode($path, "_question.md");
         $cppContents = getSolutionCode($path, "test.cpp");
         $goContents = getSolutionCode($path, "test.go");
@@ -285,7 +288,32 @@ function generateLeetcodeAction() {
         $result = sprintf($solutionContentPattern, $question, $cppContents, $goContents, $scalaContents);
 
         file_put_contents($path."/solution.md", $result);
+
+        $articleMap[] = array(
+            // 'title' => $articleTitle,
+            // 'file' => $articleFile,
+            'path' => $path,
+            'leetcodeNumber' => substr($path, 9, strlen($path) - 9),
+            'tags' => $articleTags,
+            // 'summary' => $articleSummary,
+            // 'lastModified' => $lastModified,
+        );
     }
+
+    $sidebarContents = "";
+    array_multisort(array_column($articleMap,'leetcodeNumber'),SORT_ASC,$articleMap);
+    foreach($articleMap as $title => $article) {
+        $tagStr = implode("&nbsp;&nbsp;", $article['tags']);
+        $sidebarContents .= sprintf("* [%s&nbsp;&nbsp;&nbsp;%s](%s)\n\n", $article['leetcodeNumber'], $tagStr,$article['path']."/solution.md");
+    }
+    foreach ($articleMap as $title => $article) {
+        // echo "$contents\n-----------------\n";
+        $sidebarFile = path_join($article['dir'], "/_sidebar.md");
+        // file_put_contents($sidebarFile, $sidebarContents);
+    }
+    file_put_contents("leetcode/_sidebar.md", $sidebarContents);
+
+    var_dump($articleMap);
 }
 
 function generateSideBarAction()
