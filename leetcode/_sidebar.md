@@ -1,5 +1,7 @@
 * [&nbsp;&nbsp;&nbsp;](0/solution.md)
 
+* [&nbsp;&nbsp;&nbsp;](1/solution.md)
+
 * [0094&nbsp;&nbsp;&nbsp;Tree](leetcode/0094/solution.md)
 
 * [0100&nbsp;&nbsp;&nbsp;Tree&nbsp;&nbsp;Algorithm](leetcode/0100/solution.md)

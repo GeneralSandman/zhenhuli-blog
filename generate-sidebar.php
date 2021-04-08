@@ -373,6 +373,9 @@ function generateSideBarAction()
     $rootSidebarContents .= "* [🌐  分享本站](/qrcode.md)\n";
     $rootSidebarContents .= "* [🧠  Book]()\n";
     $rootSidebarContents .= "   * [设计数据密集型应用](/设计数据密集型应用_book/SUMMARY.md)\n";
+    $rootSidebarContents .= "* [🔦 LeetCode](/leetcode/leetcode.md)\n";
+
+    
     file_put_contents("_sidebar.md", $rootSidebarContents);
     
 
@@ -454,7 +457,7 @@ main();
 function main()
 {
     generateLeetcodeAction();
-    // generateSideBarAction();
+    generateSideBarAction();
     // generateNavBarAction();
     // generateTimeLineAction();
     // generateTopArticlesAction();
