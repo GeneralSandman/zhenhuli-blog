@@ -3,14 +3,22 @@ cd $1
 
 echo "[Leetcode $1]"
 
-cat "_question.md"
+# cat "_question.md"
 
-echo "\n\n[Cpp]"
-g++ -std=c++11 -o test.out test.cpp && ./test.out
-rm test.out
+if [ -f "cpp_solution.cpp" ]; then
+    echo "\n\n[Cpp]"
+    g++ -std=c++11 -o cpp_solution.out cpp_solution.cpp && ./cpp_solution.out
+    rm cpp_solution.out
+fi
 
-echo "\n\n[Go]"
-go run test.go
+if [ -f "go_solution.go" ]; then
+    echo "\n\n[Go]"
+    go run go_solution.go
+fi
 
-echo "\n\n[Scala]"
-scala -deprecation test.scala
+
+if [ -f "scala_solution.scala" ]; then
+    echo "\n\n[Scala]"
+    scala -deprecation scala_solution.scala
+fi
+

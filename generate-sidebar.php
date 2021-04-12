@@ -282,9 +282,9 @@ function generateLeetcodeAction() {
         $articleTags = parseTagFile($path);
 
         $question = getSolutionCode($path, "_question.md");
-        $cppContents = getSolutionCode($path, "test.cpp");
-        $goContents = getSolutionCode($path, "test.go");
-        $scalaContents = getSolutionCode($path, "test.scala");
+        $cppContents = getSolutionCode($path, "cpp_solution.cpp");
+        $goContents = getSolutionCode($path, "go_solution.go");
+        $scalaContents = getSolutionCode($path, "scala_solution.scala");
         $result = sprintf($solutionContentPattern, $question, $cppContents, $goContents, $scalaContents);
 
         file_put_contents($path."/solution.md", $result);

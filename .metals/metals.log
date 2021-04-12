@@ -38333,3 +38333,33 @@ file%3A%2F%2F%2FUsers%2Fzhenhuli%2Fprivate%2Fzhenhuli-blog%2Fleetcode%2F0002%2F_
 [0m2021.04.09 20:51:33 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/0002/_test.scala[0m
 4月 09, 2021 8:58:57 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 信息: Unsupported notification method: $/setTraceNotification
+[0m2021.04.12 09:46:45 INFO  shutting down Metals[0m
+[0m2021.04.12 21:16:46 INFO  Started: Metals version 0.10.1 in workspace '/Users/zhenhuli/private/zhenhuli-blog' for client vscode 1.55.0.[0m
+[0m2021.04.12 21:16:48 INFO  time: initialize in 2.27s[0m
+[0m2021.04.12 21:16:48 WARN  Build server is not auto-connectable.[0m
+[0m2021.04.12 21:16:48 WARN  no build tool detected in workspace '/Users/zhenhuli/private/zhenhuli-blog'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.04.12 21:16:48 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/0020/_test.scala[0m
+[0m2021.04.12 21:16:53 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.04.12 21:16:55 INFO  time: code lens generation in 5.92s[0m
+4月 12, 2021 9:17:39 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 13
+[0m2021.04.12 21:21:10 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/9999/_test.scala[0m
+4月 12, 2021 9:21:50 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTraceNotification
+[0m2021.04.12 21:22:23 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/9999/_test.scala[0m
+[0m2021.04.12 21:22:36 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/9999/_test.scala[0m
+[0m2021.04.12 21:22:38 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/9999/_test.scala[0m
+[0m2021.04.12 21:22:39 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/9999/_test.scala[0m
+[0m2021.04.12 21:22:46 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/9999/_test.scala[0m
+[0m2021.04.12 21:22:49 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/9999/_test.scala[0m
+[0m2021.04.12 21:23:39 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/9999/scala_solution.scala[0m
+[0m2021.04.12 21:23:41 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/9999/scala_solution.scala[0m
+[0m2021.04.12 21:23:41 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/9999/scala_solution.scala[0m
+4月 12, 2021 9:23:41 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 87
+[0m2021.04.12 21:29:02 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/scala_solution.scala[0m
+4月 12, 2021 9:29:03 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 93
+[0m2021.04.12 21:31:10 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/001-two-sum/scala_solution.scala[0m
+4月 12, 2021 9:31:12 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 97
