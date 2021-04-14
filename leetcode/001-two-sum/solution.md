@@ -1,3 +1,6 @@
+
+
+
 # Two Sum
 
 ## Link
@@ -43,3 +46,59 @@ You can return the answer in any order.
 ## 思路
 
 [title]: https://leetcode.com/problems/two-sum
+
+
+<!-- tabs:start -->
+
+#### ** C++ **
+
+``` cpp
+
+#include <iostream>
+
+
+class Solution {
+
+};
+
+int main() {
+    Solution s;
+
+    return 0;
+}
+
+
+```
+
+#### ** Go **
+
+``` go
+
+package main
+
+func main() {
+	
+}
+
+
+```
+
+#### ** Scala **
+
+``` scala
+
+
+object Solution {
+    def maxDepth(root: TreeNode): Int = {
+    }
+
+
+
+
+    def main(args: Array[String]): Unit = {
+   }
+}
+
+```
+
+<!-- tabs:end -->

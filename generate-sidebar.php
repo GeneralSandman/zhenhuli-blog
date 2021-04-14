@@ -238,7 +238,6 @@ class Article{
 $solutionContentPattern = <<< solutionContentPattern
 
 
-# Leetcode
 
 %s
 
@@ -278,6 +277,11 @@ function generateLeetcodeAction() {
     $paths = dfsDir("leetcode");
     foreach ($paths as $path => $files) {
 
+
+        if ($path == "leetcode-crawler" || $path == "result") {
+            continue;
+        } 
+
         $articleTags = array();
         $articleTags = parseTagFile($path);
 
@@ -304,7 +308,7 @@ function generateLeetcodeAction() {
     array_multisort(array_column($articleMap,'leetcodeNumber'),SORT_ASC,$articleMap);
     foreach($articleMap as $title => $article) {
         $tagStr = implode("&nbsp;&nbsp;", $article['tags']);
-        $sidebarContents .= sprintf("* [%s&nbsp;&nbsp;&nbsp;%s](%s)\n\n", $article['leetcodeNumber'], $tagStr,$article['path']."/solution.md");
+        $sidebarContents .= sprintf("* [%s](%s)\n\n", $article['leetcodeNumber'], $article['path']."/solution.md");
     }
     foreach ($articleMap as $title => $article) {
         // echo "$contents\n-----------------\n";
@@ -312,6 +316,29 @@ function generateLeetcodeAction() {
         // file_put_contents($sidebarFile, $sidebarContents);
     }
     file_put_contents("leetcode/_sidebar.md", $sidebarContents);
+
+
+    // 在每篇文章的目录下生成自己的navbar
+    foreach ($articleMap as $title => $article) {
+
+        $contents = "";
+        $emojis = getConfigEmojis();
+        // var_dump($article);
+
+        // var_dump($article['tag']);
+        foreach($article['tags'] as $tag) {
+            $articles = $tagToArticlesMap[$tag];
+
+            $emoji = $emojis[(int)hash('md4',$tag)%count($emojis)];
+            $contents .= sprintf("* [%s %s](/tags.md)\n", $tag, $emoji);
+            foreach($articles as $article) {
+                $contents .= sprintf("   * [%s](%s)\n\n", $article['title'], $article['file']);
+            }
+        }
+        // echo "$contents\n-----------------\n";
+        $navbarFile = path_join($article['dir'], "/_navbar.md");
+        file_put_contents($navbarFile, $contents);
+    }
 
     var_dump($articleMap);
 }
@@ -366,14 +393,15 @@ function generateSideBarAction()
 
 
     // 在根目录下生成一个大的归类sidebar
-    $rootSidebarContents = "* [⚡  快速浏览](/node/099/如何快速用docsify写一篇文章及各种工具插件.md)\n";
+    $rootSidebarContents  = "* [⚡  快速浏览](/node/099/如何快速用docsify写一篇文章及各种工具插件.md)\n";
+    $rootSidebarContents .= "* [🧠  Book]()\n";
+    $rootSidebarContents .= "   * [设计数据密集型应用](/设计数据密集型应用_book/SUMMARY.md)\n";
+    $rootSidebarContents .= "* [🔦 LeetCode](/leetcode/leetcode.md)\n";
     $rootSidebarContents .= "* [💻  文章存档](/arch.md)\n";
     $rootSidebarContents .= "* [📎  文章分类](/tags.md)\n";
     $rootSidebarContents .= "* [👀  精品外站](/blogs.md)\n";
     $rootSidebarContents .= "* [🌐  分享本站](/qrcode.md)\n";
-    $rootSidebarContents .= "* [🧠  Book]()\n";
-    $rootSidebarContents .= "   * [设计数据密集型应用](/设计数据密集型应用_book/SUMMARY.md)\n";
-    $rootSidebarContents .= "* [🔦 LeetCode](/leetcode/leetcode.md)\n";
+    
 
     
     file_put_contents("_sidebar.md", $rootSidebarContents);

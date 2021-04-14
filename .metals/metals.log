@@ -38363,3 +38363,12 @@ file%3A%2F%2F%2FUsers%2Fzhenhuli%2Fprivate%2Fzhenhuli-blog%2Fleetcode%2F0002%2F_
 [0m2021.04.12 21:31:10 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/001-two-sum/scala_solution.scala[0m
 4月 12, 2021 9:31:12 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 警告: Unmatched cancel notification for request id 97
+4月 12, 2021 9:32:48 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTraceNotification
+[0m2021.04.12 21:49:40 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/scala_solution.scala[0m
+4月 12, 2021 9:49:41 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 101
+[0m2021.04.12 21:51:06 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/scala_solution.scala[0m
+4月 12, 2021 9:51:08 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 105
+[0m2021.04.13 09:40:38 INFO  shutting down Metals[0m
