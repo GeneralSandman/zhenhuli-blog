@@ -1,12 +1,54 @@
 
 
-# Leetcode
 
-Leetcode 题目描述
+# Same Tree
 
-100. Same Tree
+## Link
 
-https://leetcode.com/problems/same-tree/
+https://leetcode.com/problems/same-tree
+
+
+## Description
+
+Given the roots of two binary trees `p` and `q`, write a function to check if
+they are the same or not.
+
+Two binary trees are considered the same if they are structurally identical,
+and the nodes have the same value.
+
+
+
+**Example 1:**
+
+![](https://assets.leetcode.com/uploads/2020/12/20/ex1.jpg)
+            Input: p = [1,2,3], q = [1,2,3]    Output: true    
+
+**Example 2:**
+
+![](https://assets.leetcode.com/uploads/2020/12/20/ex2.jpg)
+            Input: p = [1,2], q = [1,null,2]    Output: false    
+
+**Example 3:**
+
+![](https://assets.leetcode.com/uploads/2020/12/20/ex3.jpg)
+            Input: p = [1,2,1], q = [1,1,2]    Output: false    
+
+
+
+**Constraints:**
+
+  * The number of nodes in both trees is in the range `[0, 100]`.
+  * `-104 <= Node.val <= 104`
+
+
+**Tags:** Tree, Depth-first Search
+
+**Difficulty:** Easy
+
+## 思路
+
+[title]: https://leetcode.com/problems/same-tree
+
 
 <!-- tabs:start -->
 
@@ -70,52 +112,10 @@ int main() {
 
 package main
 
-import "fmt"
-
 func main() {
-	a := &TreeNode{
-		Val:1,
-	}
-	b := &TreeNode{
-		Val:1,
-		Left:a,
-	}
-	root := &TreeNode{
-		Val:1,
-		Left:b,
-	}
-
-	fmt.Println(maxDepth(root))
+	
 }
 
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-
-type TreeNode struct {
-    Val int
-    Left *TreeNode
-    Right *TreeNode
-}
-
-func max(a int, b int) int {
-	if a >= b {
-		return a
-	}
-	return b
-}
-
-func maxDepth(root *TreeNode) int {
-    if root == nil {
-		return 0
-	}
-	return max(maxDepth(root.Left), maxDepth(root.Right)) + 1
-}
 
 ```
 
@@ -123,28 +123,15 @@ func maxDepth(root *TreeNode) int {
 
 ``` scala
 
-class TreeNode(_value: Int = 0, _left: TreeNode = null, _right: TreeNode = null) {
-  var value: Int = _value
-  var left: TreeNode = _left
-  var right: TreeNode = _right
-}
 
 object Solution {
     def maxDepth(root: TreeNode): Int = {
-       if (root == null)
-         return 0
-      return scala.math.max(maxDepth(root.left), maxDepth(root.right)) + 1
     }
 
 
 
 
     def main(args: Array[String]): Unit = {
-       val a = new TreeNode(0)
-       val b = new TreeNode(1, a)
-       val root = new TreeNode(1, b)
-
-       println(maxDepth(root))
    }
 }
 
