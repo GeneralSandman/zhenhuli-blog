@@ -38372,3 +38372,13 @@ file%3A%2F%2F%2FUsers%2Fzhenhuli%2Fprivate%2Fzhenhuli-blog%2Fleetcode%2F0002%2F_
 4月 12, 2021 9:51:08 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 警告: Unmatched cancel notification for request id 105
 [0m2021.04.13 09:40:38 INFO  shutting down Metals[0m
+[0m2021.04.20 10:54:53 INFO  Started: Metals version 0.10.1 in workspace '/Users/zhenhuli/private/zhenhuli-blog' for client vscode 1.55.0.[0m
+[0m2021.04.20 10:54:55 INFO  time: initialize in 1.84s[0m
+[0m2021.04.20 10:54:55 WARN  Build server is not auto-connectable.[0m
+[0m2021.04.20 10:54:55 WARN  no build tool detected in workspace '/Users/zhenhuli/private/zhenhuli-blog'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.04.20 10:54:55 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/001-two-sum/scala_solution.scala[0m
+[0m2021.04.20 10:55:00 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.04.20 10:55:01 INFO  time: code lens generation in 5.1s[0m
+[0m2021.04.20 11:03:31 WARN  no build target for: /Users/zhenhuli/private/zhenhuli-blog/leetcode/001-two-sum/scala_solution.scala[0m
+4月 20, 2021 11:03:33 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 9
