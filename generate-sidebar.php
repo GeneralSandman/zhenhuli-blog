@@ -93,6 +93,9 @@ function parseTagFile($path, $tagFile = "_tag.md")
     }
     while (! feof($fp)) {
         $line = trim(fgets($fp));
+        if (strlen($line) <= 2) {
+            continue;
+        }
         $tags[] = substr($line, 2, strlen($line)-2);
     }
     fclose($fp);
@@ -296,7 +299,7 @@ function generateLeetcodeAction() {
         $articleMap[] = array(
             // 'title' => $articleTitle,
             // 'file' => $articleFile,
-            'path' => $path,
+            'dir' => $path,
             'leetcodeNumber' => substr($path, 9, strlen($path) - 9),
             'tags' => $articleTags,
             // 'summary' => $articleSummary,
@@ -308,7 +311,7 @@ function generateLeetcodeAction() {
     array_multisort(array_column($articleMap,'leetcodeNumber'),SORT_ASC,$articleMap);
     foreach($articleMap as $title => $article) {
         $tagStr = implode("&nbsp;&nbsp;", $article['tags']);
-        $sidebarContents .= sprintf("* [%s](%s)\n\n", $article['leetcodeNumber'], $article['path']."/solution.md");
+        $sidebarContents .= sprintf("* [%s](%s)\n\n", $article['leetcodeNumber'], $article['dir']."/solution.md");
     }
     foreach ($articleMap as $title => $article) {
         // echo "$contents\n-----------------\n";
@@ -323,24 +326,25 @@ function generateLeetcodeAction() {
 
         $contents = "";
         $emojis = getConfigEmojis();
-        // var_dump($article);
+        var_dump($article);
 
         // var_dump($article['tag']);
         foreach($article['tags'] as $tag) {
-            $articles = $tagToArticlesMap[$tag];
+            // $articles = $tagToArticlesMap[$tag];
 
             $emoji = $emojis[(int)hash('md4',$tag)%count($emojis)];
-            $contents .= sprintf("* [%s %s](/tags.md)\n", $tag, $emoji);
-            foreach($articles as $article) {
-                $contents .= sprintf("   * [%s](%s)\n\n", $article['title'], $article['file']);
-            }
+            $contents .= sprintf("* [%s](/tags.md)\n", $tag);
+            // foreach($articles as $article) {
+            //     $contents .= sprintf("   * [%s](%s)\n\n", $article['title'], $article['file']);
+            // }
         }
-        // echo "$contents\n-----------------\n";
+        echo "$contents\n-----------------\n";
         $navbarFile = path_join($article['dir'], "/_navbar.md");
+        echo "$navbarFile\n";
         file_put_contents($navbarFile, $contents);
     }
 
-    var_dump($articleMap);
+    // var_dump($articleMap);
 }
 
 function generateSideBarAction()
