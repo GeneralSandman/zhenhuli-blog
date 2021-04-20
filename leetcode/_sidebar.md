@@ -12,6 +12,8 @@
 
 * [003-longest-substring-without-repeating-characters](leetcode/003-longest-substring-without-repeating-characters/solution.md)
 
+* [020-valid-parentheses](leetcode/020-valid-parentheses/solution.md)
+
 * [094-binary-tree-inorder-traversal](leetcode/094-binary-tree-inorder-traversal/solution.md)
 
 * [100-same-tree](leetcode/100-same-tree/solution.md)
@@ -21,6 +23,4 @@
 * [110-balanced-binary-tree](leetcode/110-balanced-binary-tree/solution.md)
 
 * [leetcode-crawler](leetcode/leetcode-crawler/solution.md)
-
-* [result](leetcode/result/solution.md)
 
