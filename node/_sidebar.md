@@ -1,5 +1,7 @@
 * [如何快速用docsify写一篇文章及各种工具插件](node/099/如何快速用docsify写一篇文章及各种工具插件.md)
 
+* [明瞳智控ISS，感受别样的安防监控上云体验](node/033/明瞳智控ISS，感受别样的安防监控上云体验.md)
+
 * [QQ海量分布式定时器Tikker的实现](node/032/QQ海量分布式定时器Tikker的实现.md)
 
 * [Scala难点](node/031/Scala难点.md)
