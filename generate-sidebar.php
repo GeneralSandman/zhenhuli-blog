@@ -333,7 +333,10 @@ function generateLeetcodeAction() {
     array_multisort(array_column($articleMap,'leetcodeNumber'),SORT_ASC,$articleMap);
     foreach($articleMap as $title => $article) {
         $tagStr = implode("&nbsp;&nbsp;", $article['tags']);
-        $sidebarContents .= sprintf("* [%s](%s)\n\n", $article['leetcodeNumber'], $article['dir']."/solution.md");
+        if ($article['leetcodeNumber'] == "") {
+            continue;
+        }
+        $sidebarContents .= sprintf("* [**%s**](%s)\n\n", $article['leetcodeNumber'], $article['dir']."/solution.md");
     }
     foreach ($articleMap as $title => $article) {
         // echo "$contents\n-----------------\n";
