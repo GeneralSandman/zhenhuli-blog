@@ -136,6 +136,25 @@ function getSolutionCode($path, $tagFile = "_summary.md")
 }
 
 
+function getCodeResult($path, $tagFile = "code_result.md")
+{
+    $summaryContent = "";
+    $file = path_join($path, $tagFile);
+    $fp = fopen($file, 'r');
+    if (false == $fp) {
+        return "- [ ] **C++**
+        - [ ] **Go**
+        - [ ] **Scala**";
+    }
+    while (! feof($fp)) {
+        $summaryContent .= fgets($fp);
+    }
+    fclose($fp);
+
+    return $summaryContent;
+}
+
+
 
 function generateNavBar($tagToArticlesMap, $titleToArticleMap, $tags, $path, $navbarFile="_navbar.md")
 {
@@ -244,6 +263,8 @@ $solutionContentPattern = <<< solutionContentPattern
 
 %s
 
+%s
+
 <!-- tabs:start -->
 
 #### ** C++ **
@@ -289,10 +310,11 @@ function generateLeetcodeAction() {
         $articleTags = parseTagFile($path);
 
         $question = getSolutionCode($path, "_question.md");
+        $codeResultContents = getCodeResult($path, "code_result.md");
         $cppContents = getSolutionCode($path, "cpp_solution.cpp");
         $goContents = getSolutionCode($path, "go_solution.go");
         $scalaContents = getSolutionCode($path, "scala_solution.scala");
-        $result = sprintf($solutionContentPattern, $question, $cppContents, $goContents, $scalaContents);
+        $result = sprintf($solutionContentPattern, $question, $codeResultContents, $cppContents, $goContents, $scalaContents);
 
         file_put_contents($path."/solution.md", $result);
 
@@ -471,7 +493,7 @@ function generateArticleArchInfo($article) {
 
     $tag_str = "";
     foreach($article['tags'] as $tag) {
-        $tag_str .= sprintf("[%s]() ", $tag);
+        $tag_str .= sprintf("[**%s**]() &nbsp; ", $tag);
     }
     
     $content = "";

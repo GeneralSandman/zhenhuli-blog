@@ -16,6 +16,8 @@
 
 * [094-binary-tree-inorder-traversal](leetcode/094-binary-tree-inorder-traversal/solution.md)
 
+* [098-validate-binary-search-tree](leetcode/098-validate-binary-search-tree/solution.md)
+
 * [100-same-tree](leetcode/100-same-tree/solution.md)
 
 * [104-maximum-depth-of-binary-tree](leetcode/104-maximum-depth-of-binary-tree/solution.md)
