@@ -26,5 +26,7 @@
 
 * [110-balanced-binary-tree](leetcode/110-balanced-binary-tree/solution.md)
 
+* [112-path-sum](leetcode/112-path-sum/solution.md)
+
 * [leetcode-crawler](leetcode/leetcode-crawler/solution.md)
 
