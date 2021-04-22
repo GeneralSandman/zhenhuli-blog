@@ -21,17 +21,8 @@ public:
             else return false;
         }
         
-        else if(root->left!=nullptr && root->right==nullptr){
-            return hasPathSum(root->left,sum-root->val);
-        }
+        return hasPathSum(root->left,sum-root->val)||hasPathSum(root->right,sum-root->val);
         
-        else if(root->left==nullptr && root->right!=nullptr){
-            return hasPathSum(root->right,sum-root->val);
-        }
-        
-        else{
-            return hasPathSum(root->left,sum-root->val)||hasPathSum(root->right,sum-root->val);
-        }
     }
 };
 
