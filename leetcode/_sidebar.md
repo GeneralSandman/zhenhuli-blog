@@ -6,6 +6,8 @@
 
 * [](4/solution.md)
 
+* [](5/solution.md)
+
 * [001-two-sum](leetcode/001-two-sum/solution.md)
 
 * [002-add-two-numbers](leetcode/002-add-two-numbers/solution.md)

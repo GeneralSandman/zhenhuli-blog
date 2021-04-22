@@ -52,6 +52,10 @@ An input string is valid if:
 [title]: https://leetcode.com/problems/valid-parentheses
 
 
+- [X] **C++**
+- [ ] **Go**
+- [ ] **Scala**
+
 <!-- tabs:start -->
 
 #### ** C++ **

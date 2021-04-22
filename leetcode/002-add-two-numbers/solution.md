@@ -49,6 +49,10 @@ number 0 itself.
 [title]: https://leetcode.com/problems/add-two-numbers
 
 
+- [X] **C++**
+- [ ] **Go**
+- [ ] **Scala**
+
 <!-- tabs:start -->
 
 #### ** C++ **

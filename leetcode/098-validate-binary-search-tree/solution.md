@@ -48,6 +48,10 @@ A **valid BST** is defined as follows:
 [title]: https://leetcode.com/problems/validate-binary-search-tree
 
 
+- [X] **C++**
+- [ ] **Go**
+- [ ] **Scala**
+
 <!-- tabs:start -->
 
 #### ** C++ **

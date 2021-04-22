@@ -44,6 +44,10 @@ repeating characters.
 [title]: https://leetcode.com/problems/longest-substring-without-repeating-characters
 
 
+- [X] **C++**
+- [ ] **Go**
+- [ ] **Scala**
+
 <!-- tabs:start -->
 
 #### ** C++ **

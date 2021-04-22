@@ -50,6 +50,10 @@ and the nodes have the same value.
 [title]: https://leetcode.com/problems/same-tree
 
 
+- [X] **C++**
+- [ ] **Go**
+- [ ] **Scala**
+
 <!-- tabs:start -->
 
 #### ** C++ **

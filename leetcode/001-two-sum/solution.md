@@ -48,6 +48,9 @@ You can return the answer in any order.
 [title]: https://leetcode.com/problems/two-sum
 
 
+- [X] **C++**
+- [ ] **Go**
+- [ ] **Scala**
 
 <!-- tabs:start -->
 

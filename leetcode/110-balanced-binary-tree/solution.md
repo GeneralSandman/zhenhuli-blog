@@ -49,6 +49,10 @@ For this problem, a height-balanced binary tree is defined as:
 [title]: https://leetcode.com/problems/balanced-binary-tree
 
 
+- [X] **C++**
+- [ ] **Go**
+- [ ] **Scala**
+
 <!-- tabs:start -->
 
 #### ** C++ **

@@ -48,6 +48,10 @@ path from the root node down to the farthest leaf node.
 [title]: https://leetcode.com/problems/maximum-depth-of-binary-tree
 
 
+- [X] **C++**
+- [ ] **Go**
+- [ ] **Scala**
+
 <!-- tabs:start -->
 
 #### ** C++ **
