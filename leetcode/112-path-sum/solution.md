@@ -57,7 +57,7 @@ A **leaf** is a node with no children.
 
 #### ** C++ **
 
-``` cpp
+``` go
 
 #include <iostream>
 #include <vector>

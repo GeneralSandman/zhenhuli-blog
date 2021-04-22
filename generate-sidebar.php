@@ -269,7 +269,7 @@ $solutionContentPattern = <<< solutionContentPattern
 
 #### ** C++ **
 
-``` cpp
+``` go
 
 %s
 
