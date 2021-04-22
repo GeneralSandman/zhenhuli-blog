@@ -57,7 +57,7 @@ number 0 itself.
 
 #### ** C++ **
 
-``` cpp
+``` go
 
 #include <iostream>
 #include <vector>

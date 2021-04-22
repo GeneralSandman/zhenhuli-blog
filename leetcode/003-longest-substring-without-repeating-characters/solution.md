@@ -52,7 +52,7 @@ repeating characters.
 
 #### ** C++ **
 
-``` cpp
+``` go
 
 #include <iostream>
 #include <vector>

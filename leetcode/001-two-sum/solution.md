@@ -56,7 +56,7 @@ You can return the answer in any order.
 
 #### ** C++ **
 
-``` cpp
+``` go
 
 #include <iostream>
 #include <vector>

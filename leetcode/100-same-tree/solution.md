@@ -58,7 +58,7 @@ and the nodes have the same value.
 
 #### ** C++ **
 
-``` cpp
+``` go
 
 #include <iostream>
 

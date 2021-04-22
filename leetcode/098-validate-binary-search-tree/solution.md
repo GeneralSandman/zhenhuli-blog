@@ -56,7 +56,7 @@ A **valid BST** is defined as follows:
 
 #### ** C++ **
 
-``` cpp
+``` go
 
 #include <iostream>
 #include <vector>

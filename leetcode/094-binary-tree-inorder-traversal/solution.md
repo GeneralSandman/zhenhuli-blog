@@ -69,7 +69,7 @@ Recursive solution is trivial, could you do it iteratively?
 
 #### ** C++ **
 
-``` cpp
+``` go
 
 #include <iostream>
 #include <vector>

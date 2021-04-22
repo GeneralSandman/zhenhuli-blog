@@ -28,5 +28,7 @@
 
 * [112-path-sum](leetcode/112-path-sum/solution.md)
 
+* [543-diameter-of-binary-tree](leetcode/543-diameter-of-binary-tree/solution.md)
+
 * [leetcode-crawler](leetcode/leetcode-crawler/solution.md)
 

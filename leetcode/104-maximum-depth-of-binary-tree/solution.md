@@ -56,7 +56,7 @@ path from the root node down to the farthest leaf node.
 
 #### ** C++ **
 
-``` cpp
+``` go
 
 #include <iostream>
 

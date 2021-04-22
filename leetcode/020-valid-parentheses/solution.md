@@ -60,7 +60,7 @@ An input string is valid if:
 
 #### ** C++ **
 
-``` cpp
+``` go
 
 #include <iostream>
 #include <string>
