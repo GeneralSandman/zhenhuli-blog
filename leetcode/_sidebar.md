@@ -20,6 +20,8 @@
 
 * [**104-maximum-depth-of-binary-tree**](leetcode/104-maximum-depth-of-binary-tree/solution.md)
 
+* [**108-convert-sorted-array-to-binary-search-tree**](leetcode/108-convert-sorted-array-to-binary-search-tree/solution.md)
+
 * [**110-balanced-binary-tree**](leetcode/110-balanced-binary-tree/solution.md)
 
 * [**112-path-sum**](leetcode/112-path-sum/solution.md)
@@ -28,7 +30,11 @@
 
 * [**437-path-sum-iii**](leetcode/437-path-sum-iii/solution.md)
 
+* [**530-minimum-absolute-difference-in-bst**](leetcode/530-minimum-absolute-difference-in-bst/solution.md)
+
 * [**543-diameter-of-binary-tree**](leetcode/543-diameter-of-binary-tree/solution.md)
+
+* [**783-minimum-distance-between-bst-nodes**](leetcode/783-minimum-distance-between-bst-nodes/solution.md)
 
 * [**leetcode-crawler**](leetcode/leetcode-crawler/solution.md)
 
