@@ -16,6 +16,8 @@
 
 * [**102-binary-tree-level-order-traversal**](leetcode/102-binary-tree-level-order-traversal/solution.md)
 
+* [**103-binary-tree-zigzag-level-order-traversal**](leetcode/103-binary-tree-zigzag-level-order-traversal/solution.md)
+
 * [**104-maximum-depth-of-binary-tree**](leetcode/104-maximum-depth-of-binary-tree/solution.md)
 
 * [**110-balanced-binary-tree**](leetcode/110-balanced-binary-tree/solution.md)
