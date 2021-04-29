@@ -1,0 +1,3 @@
+- Array
+- Binary Search
+- Divide and Conquer
