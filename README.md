@@ -1,6 +1,20 @@
 # 工具集合
 
 
+## Go语言实现计算几何
+
+https://github.com/WenRuige/geometry
+
+
+## Go 语言学习资料与社区索引
+
+https://github.com/Unknwon/go-study-index
+
+
+## Go入门指南
+
+https://github.com/unknwon/the-way-to-go_ZH_CN
+
 ## JSON去除转译
 
 https://www.sojson.com/yasuo.html
