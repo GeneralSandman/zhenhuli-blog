@@ -318,11 +318,17 @@ function generateLeetcodeAction() {
 
         file_put_contents($path."/solution.md", $result);
 
+        $tmp = explode("/", $path);
+        if (count($tmp) != 2) {
+            continue;
+        }
+        $tmp = explode("-", $tmp[count($tmp) - 1]);
+
         $articleMap[] = array(
             // 'title' => $articleTitle,
             // 'file' => $articleFile,
             'dir' => $path,
-            'leetcodeNumber' => substr($path, 9, strlen($path) - 9),
+            'leetcodeNumber' => $tmp[0],
             'tags' => $articleTags,
             // 'summary' => $articleSummary,
             // 'lastModified' => $lastModified,
