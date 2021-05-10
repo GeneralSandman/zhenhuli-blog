@@ -318,16 +318,17 @@ function generateLeetcodeAction() {
 
         file_put_contents($path."/solution.md", $result);
 
-        $tmp = explode("/", $path);
-        if (count($tmp) != 2) {
+        $paths = explode("/", $path);
+        if (count($paths) != 2) {
             continue;
         }
-        $tmp = explode("-", $tmp[count($tmp) - 1]);
+        $tmp = explode("-", $paths[count($paths) - 1]);
 
         $articleMap[] = array(
             // 'title' => $articleTitle,
             // 'file' => $articleFile,
             'dir' => $path,
+            'title' => $paths[count($paths) - 1],
             'leetcodeNumber' => $tmp[0],
             'tags' => $articleTags,
             // 'summary' => $articleSummary,
@@ -342,7 +343,7 @@ function generateLeetcodeAction() {
         if ($article['leetcodeNumber'] == "") {
             continue;
         }
-        $sidebarContents .= sprintf("* [**%s**](%s)\n\n", $article['leetcodeNumber'], $article['dir']."/solution.md");
+        $sidebarContents .= sprintf("* [**%s**](%s)\n\n", $article['title'], $article['dir']."/solution.md");
     }
     foreach ($articleMap as $title => $article) {
         // echo "$contents\n-----------------\n";
