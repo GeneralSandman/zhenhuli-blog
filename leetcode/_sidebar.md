@@ -30,6 +30,8 @@
 
 * [**113-path-sum-ii**](leetcode/113-path-sum-ii/solution.md)
 
+* [**204-count-primes**](leetcode/204-count-primes/solution.md)
+
 * [**206-reverse-linked-list**](leetcode/206-reverse-linked-list/solution.md)
 
 * [**437-path-sum-iii**](leetcode/437-path-sum-iii/solution.md)
