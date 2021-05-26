@@ -1,4 +1,6 @@
 * [消息队列 ⬇️](/tags.md)
+   * [消息队列Push和Pull的区别](node/034/消息队列Push和Pull的区别.md)
+
    * [Kafka入门介绍](node/027/Kafka入门介绍.md)
 
    * [NSQ重塑之详细设计](node/020/NSQ重塑之详细设计.md)
@@ -12,6 +14,8 @@
    * [DMQ开发计划](node/004/DMQ开发计划.md)
 
 * [分布式 🆕](/tags.md)
+   * [消息队列Push和Pull的区别](node/034/消息队列Push和Pull的区别.md)
+
    * [如何实现一个分布式定时器](node/030/如何实现一个分布式定时器.md)
 
    * [Kafka入门介绍](node/027/Kafka入门介绍.md)
