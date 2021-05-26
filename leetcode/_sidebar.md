@@ -6,6 +6,12 @@
 
 * [**004-median-of-two-sorted-arrays**](leetcode/004-median-of-two-sorted-arrays/solution.md)
 
+* [**012-integer-to-roman**](leetcode/012-integer-to-roman/solution.md)
+
+* [**013-roman-to-integer**](leetcode/013-roman-to-integer/solution.md)
+
+* [**015-3sum**](leetcode/015-3sum/solution.md)
+
 * [**020-valid-parentheses**](leetcode/020-valid-parentheses/solution.md)
 
 * [**094-binary-tree-inorder-traversal**](leetcode/094-binary-tree-inorder-traversal/solution.md)
