@@ -14,6 +14,8 @@
 
 * [**020-valid-parentheses**](leetcode/020-valid-parentheses/solution.md)
 
+* [**071-simplify-path**](leetcode/071-simplify-path/solution.md)
+
 * [**094-binary-tree-inorder-traversal**](leetcode/094-binary-tree-inorder-traversal/solution.md)
 
 * [**098-validate-binary-search-tree**](leetcode/098-validate-binary-search-tree/solution.md)
@@ -36,6 +38,8 @@
 
 * [**113-path-sum-ii**](leetcode/113-path-sum-ii/solution.md)
 
+* [**199-binary-tree-right-side-view**](leetcode/199-binary-tree-right-side-view/solution.md)
+
 * [**204-count-primes**](leetcode/204-count-primes/solution.md)
 
 * [**206-reverse-linked-list**](leetcode/206-reverse-linked-list/solution.md)
@@ -49,6 +53,10 @@
 * [**530-minimum-absolute-difference-in-bst**](leetcode/530-minimum-absolute-difference-in-bst/solution.md)
 
 * [**543-diameter-of-binary-tree**](leetcode/543-diameter-of-binary-tree/solution.md)
+
+* [**621-task-scheduler**](leetcode/621-task-scheduler/solution.md)
+
+* [**622-design-circular-queue**](leetcode/622-design-circular-queue/solution.md)
 
 * [**783-minimum-distance-between-bst-nodes**](leetcode/783-minimum-distance-between-bst-nodes/solution.md)
 
