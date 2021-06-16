@@ -7,8 +7,7 @@ echo "[Leetcode $1]"
 
 if [ -f "cpp_solution.cpp" ]; then
     echo "\n\n[Cpp]"
-    g++ -std=c++11 -o cpp_solution.out cpp_solution.cpp && ./cpp_solution.out
-    rm cpp_solution.out
+    g++ -std=c++11 -o cpp_solution.out cpp_solution.cpp && ./cpp_solution.out && rm cpp_solution.out
 fi
 
 if [ -f "go_solution.go" ]; then

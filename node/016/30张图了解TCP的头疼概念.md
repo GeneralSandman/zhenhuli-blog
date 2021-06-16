@@ -2,14 +2,14 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [30张图解：TCP 重传、滑动窗口、流量控制、拥塞控制发愁](#30%E5%BC%A0%E5%9B%BE%E8%A7%A3tcp-%E9%87%8D%E4%BC%A0%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E5%8F%91%E6%84%81)
-  - [重传机制](#%E9%87%8D%E4%BC%A0%E6%9C%BA%E5%88%B6)
-    - [超时重传](#%E8%B6%85%E6%97%B6%E9%87%8D%E4%BC%A0)
-    - [快速重传](#%E5%BF%AB%E9%80%9F%E9%87%8D%E4%BC%A0)
-    - [SACK 方法](#sack-%E6%96%B9%E6%B3%95)
+- [30张图解：TCP 重传、滑动窗口、流量控制、拥塞控制发愁](#30张图解tcp-重传滑动窗口流量控制拥塞控制发愁)
+  - [重传机制](#重传机制)
+    - [超时重传](#超时重传)
+    - [快速重传](#快速重传)
+    - [SACK 方法](#sack-方法)
     - [Duplicate SACK](#duplicate-sack)
-  - [滑动窗口](#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3)
-    - [引入窗口概念的原因](#%E5%BC%95%E5%85%A5%E7%AA%97%E5%8F%A3%E6%A6%82%E5%BF%B5%E7%9A%84%E5%8E%9F%E5%9B%A0)
+  - [滑动窗口](#滑动窗口)
+    - [引入窗口概念的原因](#引入窗口概念的原因)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -226,6 +226,7 @@ Duplicate SACK 又称 D-SACK，其主要使用了 SACK 来告诉「发送方」�
 窗口的实现实际上是操作系统开辟的一个缓存空间，发送方主机在等到确认应答返回之前，必须在缓冲区中保留已发送的数据。如果按期收到确认应答，此时数据就可以从缓存区清除。
 
 假设窗口大小为 3 个 TCP 段，那么发送方就可以「连续发送」 3 个 TCP 段，并且中途若有 ACK 丢失，可以通过「下一个确认应答进行确认」。如下图：
+
 
 
 https://zhuanlan.zhihu.com/p/133307545

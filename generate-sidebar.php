@@ -522,6 +522,7 @@ function main()
 {
     generateLeetcodeAction();
     generateSideBarAction();
+    generateLearnAction();
     // generateNavBarAction();
     // generateTimeLineAction();
     // generateTopArticlesAction();
