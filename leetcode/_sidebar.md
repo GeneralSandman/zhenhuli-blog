@@ -38,6 +38,12 @@
 
 * [**113-path-sum-ii**](leetcode/113-path-sum-ii/solution.md)
 
+* [**144-binary-tree-preorder-traversal**](leetcode/144-binary-tree-preorder-traversal/solution.md)
+
+* [**145-binary-tree-postorder-traversal**](leetcode/145-binary-tree-postorder-traversal/solution.md)
+
+* [**150-evaluate-reverse-polish-notation**](leetcode/150-evaluate-reverse-polish-notation/solution.md)
+
 * [**199-binary-tree-right-side-view**](leetcode/199-binary-tree-right-side-view/solution.md)
 
 * [**204-count-primes**](leetcode/204-count-primes/solution.md)
@@ -58,11 +64,17 @@
 
 * [**622-design-circular-queue**](leetcode/622-design-circular-queue/solution.md)
 
+* [**641-design-circular-deque**](leetcode/641-design-circular-deque/solution.md)
+
 * [**783-minimum-distance-between-bst-nodes**](leetcode/783-minimum-distance-between-bst-nodes/solution.md)
+
+* [**933-number-of-recent-calls**](leetcode/933-number-of-recent-calls/solution.md)
 
 * [**1022-sum-of-root-to-leaf-binary-numbers**](leetcode/1022-sum-of-root-to-leaf-binary-numbers/solution.md)
 
 * [**1161-maximum-level-sum-of-a-binary-tree**](leetcode/1161-maximum-level-sum-of-a-binary-tree/solution.md)
+
+* [**1673-find-the-most-competitive-subsequence**](leetcode/1673-find-the-most-competitive-subsequence/solution.md)
 
 * [**leetcode-crawler**](leetcode/leetcode-crawler/solution.md)
 
