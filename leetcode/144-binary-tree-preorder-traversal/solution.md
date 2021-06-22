@@ -70,6 +70,7 @@ Given the `root` of a binary tree, return _the preorder traversal of its nodes
 #include <iostream>
 #include <vector>
 #include <map>
+#include <stack>
 
 using namespace std;
 
@@ -98,6 +99,35 @@ public:
         helper(root->left, result);
         helper(root->right, result);
     }
+};
+
+class Solution2 {
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> result;
+        stack<TreeNode*> s;
+        
+        TreeNode* node = root;
+        while(node || !s.empty()) {
+
+            while(node) {
+                result.push_back(node->val);
+                s.push(node);
+                node = node->left;
+            }
+
+            if(!s.empty()) {
+                TreeNode* top = s.top();
+                s.pop();
+
+                node = top->right;
+            }
+
+        }
+
+        return result;
+    }
+
 };
 
 int main() {

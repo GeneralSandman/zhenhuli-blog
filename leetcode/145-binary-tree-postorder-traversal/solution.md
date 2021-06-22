@@ -74,6 +74,7 @@ Recursive solution is trivial, could you do it iteratively?
 #include <iostream>
 #include <vector>
 #include <map>
+#include <stack>
 
 using namespace std;
 
@@ -103,6 +104,35 @@ public:
         helper(root->right, result);
         result.push_back(root->val);
     }
+};
+
+class Solution2 {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> result;
+        stack<TreeNode*> s;
+        
+        TreeNode* node = root;
+        while(node || !s.empty()) {
+
+            while(node) {
+                result.push_back(node->val);
+                s.push(node);
+                node = node->left;
+            }
+
+            if(!s.empty()) {
+                TreeNode* top = s.top();
+                s.pop();
+
+                node = top->right;
+            }
+
+        }
+
+        return result;
+    }
+
 };
 
 int main() {
