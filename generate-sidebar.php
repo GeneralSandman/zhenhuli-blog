@@ -429,14 +429,15 @@ function generateSideBarAction()
 
 
     // 在根目录下生成一个大的归类sidebar
-    $rootSidebarContents  = "* [⚡  快速浏览](/node/099/如何快速用docsify写一篇文章及各种工具插件.md)\n";
-    $rootSidebarContents .= "* [🧠  Book]()\n";
-    $rootSidebarContents .= "   * [设计数据密集型应用](/设计数据密集型应用_book/SUMMARY.md)\n";
-    $rootSidebarContents .= "* [🔦 LeetCode](/leetcode/leetcode.md)\n";
-    $rootSidebarContents .= "* [💻  文章存档](/arch.md)\n";
-    $rootSidebarContents .= "* [📎  文章分类](/tags.md)\n";
-    $rootSidebarContents .= "* [👀  精品外站](/blogs.md)\n";
-    $rootSidebarContents .= "* [🌐  分享本站](/qrcode.md)\n";
+    $rootSidebarContents  = "* [⚡  **快速浏览**](/node/099/如何快速用docsify写一篇文章及各种工具插件.md)\n";
+    $rootSidebarContents .= "* [🧠  **外链Book**]()\n";
+    $rootSidebarContents .= "   * [- 设计数据密集型应用](/设计数据密集型应用_book/SUMMARY.md)\n";
+    $rootSidebarContents .= "   * [- 利用 Python 进行数据分析](https://wizardforcel.gitbooks.io/pyda-2e/content/)\n";
+    $rootSidebarContents .= "* [🔦  **LeetCode**](/leetcode/leetcode.md)\n";
+    $rootSidebarContents .= "* [💻  **文章存档**](/arch.md)\n";
+    $rootSidebarContents .= "* [📎  **文章分类**](/tags.md)\n";
+    $rootSidebarContents .= "* [👀  **精品外站**](/blogs.md)\n";
+    $rootSidebarContents .= "* [🌐  **分享本站**](/qrcode.md)\n";
     
 
     
