@@ -72,7 +72,11 @@
 
 * [**783-minimum-distance-between-bst-nodes**](leetcode/783-minimum-distance-between-bst-nodes/solution.md)
 
+* [**792-number-of-matching-subsequences**](leetcode/792-number-of-matching-subsequences/solution.md)
+
 * [**933-number-of-recent-calls**](leetcode/933-number-of-recent-calls/solution.md)
+
+* [**1021-remove-outermost-parentheses**](leetcode/1021-remove-outermost-parentheses/solution.md)
 
 * [**1022-sum-of-root-to-leaf-binary-numbers**](leetcode/1022-sum-of-root-to-leaf-binary-numbers/solution.md)
 

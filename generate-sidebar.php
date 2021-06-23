@@ -433,6 +433,7 @@ function generateSideBarAction()
     $rootSidebarContents .= "* [🧠  **外链Book**]()\n";
     $rootSidebarContents .= "   * [- 设计数据密集型应用](/设计数据密集型应用_book/SUMMARY.md)\n";
     $rootSidebarContents .= "   * [- 利用 Python 进行数据分析](https://wizardforcel.gitbooks.io/pyda-2e/content/)\n";
+    $rootSidebarContents .= "   * [- Go语言高级编程](https://chai2010.cn/advanced-go-programming-book/)\n";
     $rootSidebarContents .= "* [🔦  **LeetCode**](/leetcode/leetcode.md)\n";
     $rootSidebarContents .= "* [💻  **文章存档**](/arch.md)\n";
     $rootSidebarContents .= "* [📎  **文章分类**](/tags.md)\n";
