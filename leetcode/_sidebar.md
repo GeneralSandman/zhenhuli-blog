@@ -16,6 +16,8 @@
 
 * [**071-simplify-path**](leetcode/071-simplify-path/solution.md)
 
+* [**092-reverse-linked-list-ii**](leetcode/092-reverse-linked-list-ii/solution.md)
+
 * [**094-binary-tree-inorder-traversal**](leetcode/094-binary-tree-inorder-traversal/solution.md)
 
 * [**098-validate-binary-search-tree**](leetcode/098-validate-binary-search-tree/solution.md)
