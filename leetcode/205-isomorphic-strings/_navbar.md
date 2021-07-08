@@ -1,0 +1,1 @@
+* [Hash Table](/tags.md)

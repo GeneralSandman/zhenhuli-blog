@@ -2,6 +2,11 @@
 
 ![sdfsdf](./test.svg)
 
+
+## 生成图表
+
+https://github.com/go-echarts/go-echarts
+
 ## Go语言实现计算几何
 
 https://github.com/WenRuige/geometry

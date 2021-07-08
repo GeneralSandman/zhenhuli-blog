@@ -3,6 +3,7 @@
    * [- 设计数据密集型应用](/设计数据密集型应用_book/SUMMARY.md)
    * [- 利用 Python 进行数据分析](https://wizardforcel.gitbooks.io/pyda-2e/content/)
    * [- Go语言高级编程](https://chai2010.cn/advanced-go-programming-book/)
+   * [- Awesome GO](https://shockerli.net/post/go-awesome/)
 * [🔦  **LeetCode**](/leetcode/leetcode.md)
 * [💻  **文章存档**](/arch.md)
 * [📎  **文章分类**](/tags.md)

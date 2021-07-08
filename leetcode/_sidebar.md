@@ -54,6 +54,8 @@
 
 * [**204-count-primes**](leetcode/204-count-primes/solution.md)
 
+* [**205-isomorphic-strings**](leetcode/205-isomorphic-strings/solution.md)
+
 * [**206-reverse-linked-list**](leetcode/206-reverse-linked-list/solution.md)
 
 * [**404-sum-of-left-leaves**](leetcode/404-sum-of-left-leaves/solution.md)
