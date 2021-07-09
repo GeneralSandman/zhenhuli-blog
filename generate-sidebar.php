@@ -435,6 +435,7 @@ function generateSideBarAction()
     $rootSidebarContents .= "   * [- 利用 Python 进行数据分析](https://wizardforcel.gitbooks.io/pyda-2e/content/)\n";
     $rootSidebarContents .= "   * [- Go语言高级编程](https://chai2010.cn/advanced-go-programming-book/)\n";
     $rootSidebarContents .= "   * [- Awesome GO](https://shockerli.net/post/go-awesome/)\n";
+    $rootSidebarContents .= "   * [- Docker —— 从入门到实践](https://yeasy.gitbook.io/docker_practice/)\n";
     $rootSidebarContents .= "* [🔦  **LeetCode**](/leetcode/leetcode.md)\n";
     $rootSidebarContents .= "* [💻  **文章存档**](/arch.md)\n";
     $rootSidebarContents .= "* [📎  **文章分类**](/tags.md)\n";
@@ -525,8 +526,4 @@ function main()
 {
     generateLeetcodeAction();
     generateSideBarAction();
-    generateLearnAction();
-    // generateNavBarAction();
-    // generateTimeLineAction();
-    // generateTopArticlesAction();
 }
