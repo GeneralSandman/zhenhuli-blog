@@ -16,7 +16,7 @@
 > [!ATTENTION|style:callout|label:摘要]
 > 在这里写一下文章的摘要 [阅读全文](node/038/boltdb学习笔记.md)
 
-📌  [**Blog**]() &nbsp; [**Docsify**]() &nbsp; 
+📌  [**Boltdb**]() &nbsp; [**kv存储**]() &nbsp; 
 
 🗓  June 28 2021 14:34:13.
 
@@ -27,7 +27,7 @@
 > [!ATTENTION|style:callout|label:摘要]
 > 在这里写一下文章的摘要 [阅读全文](node/037/Nsq学习笔记.md)
 
-📌  [**Blog**]() &nbsp; [**Docsify**]() &nbsp; 
+📌  [**NSQ**]() &nbsp; [**分布式**]() &nbsp; [**消息队列**]() &nbsp; 
 
 🗓  July 09 2021 09:59:23.
 

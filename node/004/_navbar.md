@@ -2,6 +2,8 @@
    * [DMQ开发计划](node/004/DMQ开发计划.md)
 
 * [消息队列 ⬇️](/tags.md)
+   * [Nsq学习笔记](node/037/Nsq学习笔记.md)
+
    * [消息队列Push和Pull的区别](node/034/消息队列Push和Pull的区别.md)
 
    * [Kafka入门介绍](node/027/Kafka入门介绍.md)
