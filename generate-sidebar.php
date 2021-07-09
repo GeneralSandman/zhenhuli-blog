@@ -87,6 +87,9 @@ function parseTagFile($path, $tagFile = "_tag.md")
 {
     $tags = array();
     $file = path_join($path, $tagFile);
+    if(!file_exists($file)) {
+        return array();
+    }
     $fp = fopen($file, 'r');
     if (false == $fp) {
         return array();
@@ -123,6 +126,9 @@ function getSolutionCode($path, $tagFile = "_summary.md")
 {
     $summaryContent = "";
     $file = path_join($path, $tagFile);
+    if(!file_exists($file)) {
+        return "this is just a code";
+    }
     $fp = fopen($file, 'r');
     if (false == $fp) {
         return "this is just a code";
@@ -140,6 +146,11 @@ function getCodeResult($path, $tagFile = "code_result.md")
 {
     $summaryContent = "";
     $file = path_join($path, $tagFile);
+    if(!file_exists($file)) {
+        return "- [ ] **C++**
+        - [ ] **Go**
+        - [ ] **Scala**";
+    }
     $fp = fopen($file, 'r');
     if (false == $fp) {
         return "- [ ] **C++**
@@ -299,12 +310,18 @@ function generateLeetcodeAction() {
     global $solutionContentPattern;
     $articleMap = array();
     $paths = dfsDir("leetcode");
+    // var_dump(json_encode($paths));
     foreach ($paths as $path => $files) {
 
-
-        if ($path == "leetcode-crawler" || $path == "result") {
+        if ($path == "leetcode/leetcode-crawler" || $path == "result") {
             continue;
         } 
+
+        if (!is_array($files)) {
+            continue;
+        }
+
+        echo "$path\n";
 
         $articleTags = array();
         $articleTags = parseTagFile($path);
@@ -358,7 +375,7 @@ function generateLeetcodeAction() {
 
         $contents = "";
         $emojis = getConfigEmojis();
-        var_dump($article);
+        // var_dump($article);
 
         // var_dump($article['tag']);
         foreach($article['tags'] as $tag) {
@@ -370,9 +387,9 @@ function generateLeetcodeAction() {
             //     $contents .= sprintf("   * [%s](%s)\n\n", $article['title'], $article['file']);
             // }
         }
-        echo "$contents\n-----------------\n";
+        // echo "$contents\n-----------------\n";
         $navbarFile = path_join($article['dir'], "/_navbar.md");
-        echo "$navbarFile\n";
+        // echo "$navbarFile\n";
         file_put_contents($navbarFile, $contents);
     }
 

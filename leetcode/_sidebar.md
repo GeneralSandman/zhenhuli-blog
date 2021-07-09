@@ -90,5 +90,3 @@
 
 * [**1673-find-the-most-competitive-subsequence**](leetcode/1673-find-the-most-competitive-subsequence/solution.md)
 
-* [**leetcode-crawler**](leetcode/leetcode-crawler/solution.md)
-
