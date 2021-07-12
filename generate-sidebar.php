@@ -528,56 +528,54 @@ function generateSideBarAction()
         "nodes" => array(),
         "links" => array(),
     );
+    $articleMap = array();
 
-    $t = 0;
     // generateLinkGraphAction()
     foreach($tagToArticlesMap as $tag => $articles) {
 
+        // tag 节点
         $node = array(
             "itemStyle" => array(
                 "color" => "#4f19c7",
             ),
             "name" => $tag,
-            "x" => rand(-700, 700),
-            "y" => rand(-700, 700),
-            "symbolSize" => 9,
+            "x" => rand(-7000, 7000),
+            "y" => rand(-7000, 7000),
+            "symbolSize" => 10,
         );
         array_push($graph["nodes"], $node);
-
-
         
         foreach($articles as $article) {
 
-            $node = array(
-                "itemStyle" => array(
-                    "color" => "#c71969",
-                ),
-                "name" => $article["title"],
-                "x" => rand(-700, 700),
-                "y" => rand(-700, 700),
-                "symbolSize" => 4.7252817,
-            );
-            array_push($graph["nodes"], $node);
+            $title = $article["title"];
 
+            $articleMap[$title] = 1;
 
             $link = array(
                 "source" => $tag,
-                "target" => $article["title"],
+                "target" => $title,
             );
             array_push($graph["links"], $link);
-
         }
-
-        if ($t++ >= 1) {
-            break;
-        }
+    }
 
 
+    foreach($articleMap as $title => $tmp) {
+
+        // 文章节点
+        $node = array(
+            "itemStyle" => array(
+                "color" => "#c71969",
+            ),
+            "name" => $title,
+            "x" => rand(-7000, 7000),
+            "y" => rand(-7000, 700),
+            "symbolSize" => 30,
+        );
+        array_push($graph["nodes"], $node);
     }
 
     echo json_encode($graph);
-
-    
     return;
 }
 
