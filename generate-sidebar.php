@@ -477,6 +477,7 @@ function generateSideBarAction()
     // 生成文章归档页面
     $archContents = "# 文章存档\n\n";
     foreach($articleMap as $title => $article) {
+        // echo "$title\n";
         $archContents .= generateArticleArchInfo($article);
     }
     file_put_contents("./arch.md", $archContents);
@@ -500,6 +501,8 @@ function generateSideBarAction()
         $emojis = getConfigEmojis();
         // var_dump($article);
 
+        echo "$title: ".implode(",", $article['tags'])."\n";
+
         // var_dump($article['tag']);
         foreach($article['tags'] as $tag) {
             $articles = $tagToArticlesMap[$tag];
@@ -510,7 +513,7 @@ function generateSideBarAction()
                 $contents .= sprintf("   * [%s](%s)\n\n", $article['title'], $article['file']);
             }
         }
-        // echo "$contents\n-----------------\n";
+        echo "$contents\n-----------------\n";
         $navbarFile = path_join($article['dir'], "/_navbar.md");
         file_put_contents($navbarFile, $contents);
     }

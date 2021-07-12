@@ -4,6 +4,8 @@
 * [消息队列 ⬇️](/tags.md)
    * [Nsq学习笔记](node/037/Nsq学习笔记.md)
 
+   * [消息队列消息去重](node/035/消息队列消息去重.md)
+
    * [消息队列Push和Pull的区别](node/034/消息队列Push和Pull的区别.md)
 
    * [Kafka入门介绍](node/027/Kafka入门介绍.md)

@@ -90,9 +90,16 @@ func consumer(NSQDsAddrs []string, topic string, channel string) {
 ```
 
 -----------------------------
-### 单实例NSQ 发送消息 消费消息流程
+### nsqd单机部署、发送消息、消费消息流程
 ```plantuml
 @startuml
+
+skinparam responseMessageBelowArrow true
+
+actor Consumer #red
+
+queue       NSQD       as NSQD
+
 Consumer -> NSQD:   1.0 TCP Connect
 Consumer -> NSQD:   1.1 Send MagicV2
 Consumer -> NSQD:   1.2 Send Cmd:IDENTIFY
@@ -168,9 +175,63 @@ Consumer -> NSQD:   3.4 Send Cmd:FIN
 
 
 -----------------------------
-### nsqd nsqlookupd 交互流程
+### nsqd 分布式部署 发送消息、消费消息流程
 ```plantuml
 @startuml
+
+skinparam responseMessageBelowArrow true
+participant Producer order 1
+participant NSQD order 2
+participant NSQLOOKUPD order 3
+participant Consumer order 4
+
+
+Producer -> NSQD: 	2.0 TCP Connect
+Producer -> NSQD:	2.1 Send MagicV2
+Producer -> NSQD:	2.2 Send Cmd:IDENTIFY
+NSQD --> Producer:  2.3 OK
+
+
+NSQD -> Producer:  _heartbeat_
+Producer --> NSQD:	NOP
+NSQD -> Producer:  _heartbeat_
+Producer --> NSQD:	NOP
+NSQD -> Producer:  _heartbeat_
+Producer --> NSQD:	NOP
+
+
+
+NSQD -> NSQLOOKUPD:   1.0 TCP Connect
+NSQD -> NSQLOOKUPD:   1.1 Send MagicV1
+NSQD -> NSQLOOKUPD:   1.2 Send Cmd:IDENTIFY
+NSQLOOKUPD --> NSQD:  1.3 OK
+NSQD -> NSQLOOKUPD:   1.4 PING
+NSQLOOKUPD --> NSQD:  1.5 OK
+NSQD -> NSQLOOKUPD:   1.4 PING
+NSQLOOKUPD --> NSQD:  1.5 OK
+
+
+== Consumer 通过lookup 发现服务==
+
+actor Consumer #red
+
+Consumer -> NSQLOOKUPD:		HTTP Connect
+Consumer -> NSQLOOKUPD: 	GET /lookup?topic=topic-name
+NSQLOOKUPD --> Consumer:	Response: topic所在nsqd信息，此时未查找到注册到的信息
+
+Producer -> NSQD:	2.9 Send Cmd:PUB
+NSQD --> Producer:  2.10 OK
+
+NSQD -> NSQLOOKUPD:   Register [topic]
+NSQLOOKUPD -> NSQD:   OK
+
+Consumer -> NSQLOOKUPD:		HTTP Connect
+Consumer -> NSQLOOKUPD: 	GET /lookup?topic=topic-name
+NSQLOOKUPD --> Consumer:	Response: topic所在nsqd信息，此时已查找到注册的信息
+
+
+== Consumer 连接 NSQD ==
+
 Consumer -> NSQD:   1.0 TCP Connect
 Consumer -> NSQD:   1.1 Send MagicV2
 Consumer -> NSQD:   1.2 Send Cmd:IDENTIFY
@@ -184,15 +245,19 @@ Consumer -> NSQD:  1.8 Send Cmd:NOP _heartbeat_
 NSQD --> Consumer:	1.8 _heartbeat_
 
 
-Producer -> NSQD: 	2.0 TCP Connect
-Producer -> NSQD:	2.1 Send MagicV2
-Producer -> NSQD:	2.2 Send Cmd:IDENTIFY
-NSQD --> Producer:  2.3 OK
-NSQD --> Producer:  2.4 Send Cmd:NOP _heartbeat_
-NSQD --> Producer:  2.5 Send Cmd:NOP _heartbeat_
-NSQD --> Producer:  2.6 Send Cmd:NOP _heartbeat_
-Producer -> NSQD:	2.7 Send Cmd:PUB
-NSQD --> Producer:  2.8 OK
+
+== Consumer 消费消息 ==
+
+
+NSQD --> Consumer:  3.1 Send Nsq-Message
+Consumer -> NSQD:   3.2 Send Cmd:FIN
+
+Producer -> NSQD:	2.9 Send Cmd:PUB
+NSQD --> Producer:  2.10 OK
+
+NSQD --> Consumer:  3.3 Send Nsq-Message
+Consumer -> NSQD:   3.4 Send Cmd:FIN
+
 
 
 NSQD --> Consumer:  3.1 Send Nsq-Message
@@ -210,8 +275,15 @@ Consumer -> NSQD:   3.4 Send Cmd:FIN
 
 
 #### nsqlookupd 功能
+
+
 nsqlookupd 发现服务，是一个记录并传播 NSQ 集群运行状态的守护进程。
+
 每个nsqd实例都有一个与nsqlookupd的TCP长连接，nsqd通过这个连接将自己注册为某个话题（topic）的生产者，并定期推送(nsqd)状态。
+
 消费者可以通过nsqlookupd 查找哪个nsqd 提供他们感兴趣的主题的实例的地址，确定谁是感兴趣的话题（topic）的生产者。
+
 新的消费者要订阅一个topic，只需启动一个配置了nsqlookupd实例地址的消费者客户端。消费者通常只需要一个 nsqlookupd（它们将会联合它们所知的nsqlookupd 实例响应）
+
 nsqlookupd中存储了nsqd集群所有节点的topic和channel信息，以HTTP API的方式向消费者提供查询指定topic的生产者，为消费者解决了识别nsqd服务的问题。
+

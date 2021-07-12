@@ -2,19 +2,11 @@
 
    * [如何快速用docsify写一篇文章及各种工具插件](node/099/如何快速用docsify写一篇文章及各种工具插件.md)
 
-   * [Etcd学习笔记](node/036/Etcd学习笔记.md)
-
-   * [消息队列消息去重](node/035/消息队列消息去重.md)
-
    * [QQ海量分布式定时器Tikker的实现](node/032/QQ海量分布式定时器Tikker的实现.md)
 
 * ## Docsify
 
    * [如何快速用docsify写一篇文章及各种工具插件](node/099/如何快速用docsify写一篇文章及各种工具插件.md)
-
-   * [Etcd学习笔记](node/036/Etcd学习笔记.md)
-
-   * [消息队列消息去重](node/035/消息队列消息去重.md)
 
    * [QQ海量分布式定时器Tikker的实现](node/032/QQ海量分布式定时器Tikker的实现.md)
 
@@ -38,6 +30,10 @@
 
    * [Nsq学习笔记](node/037/Nsq学习笔记.md)
 
+   * [Etcd学习笔记](node/036/Etcd学习笔记.md)
+
+   * [消息队列消息去重](node/035/消息队列消息去重.md)
+
    * [消息队列Push和Pull的区别](node/034/消息队列Push和Pull的区别.md)
 
    * [如何实现一个分布式定时器](node/030/如何实现一个分布式定时器.md)
@@ -56,6 +52,8 @@
 
    * [Nsq学习笔记](node/037/Nsq学习笔记.md)
 
+   * [消息队列消息去重](node/035/消息队列消息去重.md)
+
    * [消息队列Push和Pull的区别](node/034/消息队列Push和Pull的区别.md)
 
    * [Kafka入门介绍](node/027/Kafka入门介绍.md)
@@ -69,6 +67,16 @@
    * [Nsq-Learn](node/007/Nsq-Learn.md)
 
    * [DMQ开发计划](node/004/DMQ开发计划.md)
+
+* ## Etcd
+
+   * [Etcd学习笔记](node/036/Etcd学习笔记.md)
+
+   * [NSQ重塑之详细设计](node/020/NSQ重塑之详细设计.md)
+
+* ## 服务发现
+
+   * [Etcd学习笔记](node/036/Etcd学习笔记.md)
 
 * ## 安防监控
 
@@ -197,10 +205,6 @@
    * [Go-Ratelimit-服务流量限制](node/006/Go-Ratelimit-服务流量限制.md)
 
 * ## Nsq
-
-   * [NSQ重塑之详细设计](node/020/NSQ重塑之详细设计.md)
-
-* ## Etcd
 
    * [NSQ重塑之详细设计](node/020/NSQ重塑之详细设计.md)
 
