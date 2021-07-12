@@ -26,6 +26,8 @@
 
    * [消息队列Push和Pull的区别](node/034/消息队列Push和Pull的区别.md)
 
+   * [QQ海量分布式定时器Tikker的实现](node/032/QQ海量分布式定时器Tikker的实现.md)
+
    * [如何实现一个分布式定时器](node/030/如何实现一个分布式定时器.md)
 
    * [Kafka入门介绍](node/027/Kafka入门介绍.md)

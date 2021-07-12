@@ -2,13 +2,9 @@
 
    * [如何快速用docsify写一篇文章及各种工具插件](node/099/如何快速用docsify写一篇文章及各种工具插件.md)
 
-   * [QQ海量分布式定时器Tikker的实现](node/032/QQ海量分布式定时器Tikker的实现.md)
-
 * ## Docsify
 
    * [如何快速用docsify写一篇文章及各种工具插件](node/099/如何快速用docsify写一篇文章及各种工具插件.md)
-
-   * [QQ海量分布式定时器Tikker的实现](node/032/QQ海量分布式定时器Tikker的实现.md)
 
 * ## Boltdb
 
@@ -35,6 +31,8 @@
    * [消息队列消息去重](node/035/消息队列消息去重.md)
 
    * [消息队列Push和Pull的区别](node/034/消息队列Push和Pull的区别.md)
+
+   * [QQ海量分布式定时器Tikker的实现](node/032/QQ海量分布式定时器Tikker的实现.md)
 
    * [如何实现一个分布式定时器](node/030/如何实现一个分布式定时器.md)
 
@@ -96,6 +94,12 @@
 
    * [cos-notify](node/003/cos-notify.md)
 
+* ## 定时器
+
+   * [QQ海量分布式定时器Tikker的实现](node/032/QQ海量分布式定时器Tikker的实现.md)
+
+   * [如何实现一个分布式定时器](node/030/如何实现一个分布式定时器.md)
+
 * ## 编程
 
    * [Scala难点](node/031/Scala难点.md)
@@ -115,10 +119,6 @@
 * ## Scala
 
    * [Scala难点](node/031/Scala难点.md)
-
-* ## 定时器
-
-   * [如何实现一个分布式定时器](node/030/如何实现一个分布式定时器.md)
 
 * ## 职业发展
 

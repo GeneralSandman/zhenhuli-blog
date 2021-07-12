@@ -321,7 +321,7 @@ function generateLeetcodeAction() {
             continue;
         }
 
-        echo "$path\n";
+        // echo "$path\n";
 
         $articleTags = array();
         $articleTags = parseTagFile($path);
@@ -501,7 +501,7 @@ function generateSideBarAction()
         $emojis = getConfigEmojis();
         // var_dump($article);
 
-        echo "$title: ".implode(",", $article['tags'])."\n";
+        // echo "$title: ".implode(",", $article['tags'])."\n";
 
         // var_dump($article['tag']);
         foreach($article['tags'] as $tag) {
@@ -513,11 +513,69 @@ function generateSideBarAction()
                 $contents .= sprintf("   * [%s](%s)\n\n", $article['title'], $article['file']);
             }
         }
-        echo "$contents\n-----------------\n";
+        // echo "$contents\n-----------------\n";
         $navbarFile = path_join($article['dir'], "/_navbar.md");
         file_put_contents($navbarFile, $contents);
     }
 
+
+
+
+
+
+
+    $graph = array(
+        "nodes" => array(),
+        "links" => array(),
+    );
+
+    $t = 0;
+    // generateLinkGraphAction()
+    foreach($tagToArticlesMap as $tag => $articles) {
+
+        $node = array(
+            "itemStyle" => array(
+                "color" => "#4f19c7",
+            ),
+            "name" => $tag,
+            "x" => rand(-700, 700),
+            "y" => rand(-700, 700),
+            "symbolSize" => 9,
+        );
+        array_push($graph["nodes"], $node);
+
+
+        
+        foreach($articles as $article) {
+
+            $node = array(
+                "itemStyle" => array(
+                    "color" => "#c71969",
+                ),
+                "name" => $article["title"],
+                "x" => rand(-700, 700),
+                "y" => rand(-700, 700),
+                "symbolSize" => 4.7252817,
+            );
+            array_push($graph["nodes"], $node);
+
+
+            $link = array(
+                "source" => $tag,
+                "target" => $article["title"],
+            );
+            array_push($graph["links"], $link);
+
+        }
+
+        if ($t++ >= 1) {
+            break;
+        }
+
+
+    }
+
+    echo json_encode($graph);
 
     
     return;
@@ -541,9 +599,14 @@ function generateArticleArchInfo($article) {
     return $content;
 }
 
+function generateLinkGraphAction() {
+
+}
+
 main();
 function main()
 {
     generateLeetcodeAction();
     generateSideBarAction();
+    generateLinkGraphAction();
 }
