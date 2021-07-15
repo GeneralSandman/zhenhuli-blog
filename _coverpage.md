@@ -1,11 +1,15 @@
-# Sunnie’s Blog
-## 技术改变世界
-前端笔记 | 运动生活 | 技术博客
+<!-- _coverpage.md -->
 
+![](_media/icon.svg)
+![color](#f0f0f0)
 
+# docsify <small>3.5</small>
 
-[<i class="iconfont icon-github"></i> GitHub](https://github.com/sunniejs/blog)
-[马上开始 <i class="iconfont icon-down"></i>](#main)
+> 一个神奇的文档网站生成器。
 
-<!-- background image -->
-![](https://www.sunniejs.cn/static/wx/bg.jpg)
+- 简单、轻便 (压缩后 ~21kB)
+- 无需生成 html 文件
+- 众多主题
+
+[GitHub](https://github.com/docsifyjs/docsify/)
+[Get Started](#docsify)
