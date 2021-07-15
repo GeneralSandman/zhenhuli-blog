@@ -1,4 +1,4 @@
-* [TCP 👣](/tags.md)
+* [Tcp 🎉](/tags.md)
    * [探究！一个数据包在网络中的心路历程](node/017/探究！一个数据包在网络中的心路历程.md)
 
    * [30张图了解TCP的头疼概念](node/016/30张图了解TCP的头疼概念.md)
@@ -14,6 +14,6 @@
 
    * [TCP拥塞控制](node/001/TCP拥塞控制.md)
 
-* [BBR 🆕](/tags.md)
+* [Bbr 🎉](/tags.md)
    * [TCP拥塞控制](node/001/TCP拥塞控制.md)
 

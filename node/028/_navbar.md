@@ -12,6 +12,8 @@
 
    * [震惊！Python的requests库竟然有这么异想不到的表现](node/025/震惊！Python的requests库竟然有这么异想不到的表现.md)
 
-* [QUIC 🍎](/tags.md)
+   * [探究！一个数据包在网络中的心路历程](node/017/探究！一个数据包在网络中的心路历程.md)
+
+* [Quic 🌐](/tags.md)
    * [QUIC协议原理浅解](node/028/QUIC协议原理浅解.md)
 

@@ -38,7 +38,7 @@
 > [!ATTENTION|style:callout|label:摘要]
 > 在这里写一下文章的摘要 [阅读全文](node/038/boltdb学习笔记.md)
 
-📌  [**Boltdb**]() &nbsp; [**kv存储**]() &nbsp; 
+📌  [**Boltdb**]() &nbsp; [**Kv存储**]() &nbsp; 
 
 🗓  June 28 2021 14:34:13.
 
@@ -49,7 +49,7 @@
 > [!ATTENTION|style:callout|label:摘要]
 > 在这里写一下文章的摘要 [阅读全文](node/037/Nsq学习笔记.md)
 
-📌  [**NSQ**]() &nbsp; [**分布式**]() &nbsp; [**消息队列**]() &nbsp; 
+📌  [**Nsq**]() &nbsp; [**分布式**]() &nbsp; [**消息队列**]() &nbsp; 
 
 🗓  July 09 2021 17:19:35.
 
@@ -148,7 +148,7 @@
 > [!ATTENTION|style:callout|label:摘要]
 > 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/028/QUIC协议原理浅解.md)
 
-📌  [**网络**]() &nbsp; [**Http**]() &nbsp; [**QUIC**]() &nbsp; 
+📌  [**网络**]() &nbsp; [**Http**]() &nbsp; [**Quic**]() &nbsp; 
 
 🗓  March 19 2021 10:35:35.
 
@@ -269,7 +269,7 @@
 > [!ATTENTION|style:callout|label:摘要]
 > 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/017/探究！一个数据包在网络中的心路历程.md)
 
-📌  [**网络**]() &nbsp; [**HTTP**]() &nbsp; [**TCP**]() &nbsp; 
+📌  [**网络**]() &nbsp; [**Http**]() &nbsp; [**Tcp**]() &nbsp; 
 
 🗓  March 14 2021 00:05:23.
 
@@ -280,7 +280,7 @@
 > [!ATTENTION|style:callout|label:摘要]
 > 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/016/30张图了解TCP的头疼概念.md)
 
-📌  [**网络**]() &nbsp; [**TCP**]() &nbsp; 
+📌  [**网络**]() &nbsp; [**Tcp**]() &nbsp; 
 
 🗓  May 28 2021 10:02:39.
 
@@ -291,7 +291,7 @@
 > [!ATTENTION|style:callout|label:摘要]
 > 传统的串行代码执行，逻辑比较简单，当数据量比较大时，执行效率低下，既然我们使用go，那就利用go相对与其他语言的优势，轻量化的协程以及channel，接下来让我们使用go协程+chan，让我们的代码速度来个大的飞跃吧～ [阅读全文](node/014/分布式实时消息平台NSQ.md)
 
-📌  [**NSQ**]() &nbsp; [**分布式**]() &nbsp; [**中间件**]() &nbsp; [**消息队列**]() &nbsp; 
+📌  [**Nsq**]() &nbsp; [**分布式**]() &nbsp; [**中间件**]() &nbsp; [**消息队列**]() &nbsp; 
 
 🗓  March 05 2021 09:50:04.
 
@@ -368,7 +368,7 @@
 > [!ATTENTION|style:callout|label:摘要]
 > 随着时代的发展，编程语言对这些系统调用又进一步进行了封装，如今做应用层开发，几乎不会在程序中看到epoll之类的字眼，大多数时候我们就只要聚焦在业务逻辑上就好。Go 的 net 库针对不同平台封装了不同的syscall API，http库又是构建在net库之上，所以在Go语言中我们可以借助标准库，很轻松地写出高性能的http服务。 [阅读全文](node/007/Nsq-Learn.md)
 
-📌  [**NSQ**]() &nbsp; [**消息队列**]() &nbsp; [**中间件**]() &nbsp; 
+📌  [**Nsq**]() &nbsp; [**消息队列**]() &nbsp; [**中间件**]() &nbsp; 
 
 🗓  March 02 2021 19:44:25.
 
@@ -401,7 +401,7 @@
 > [!ATTENTION|style:callout|label:摘要]
 > 想简单写一个消息队列，从哪里下嘴 [阅读全文](node/004/DMQ开发计划.md)
 
-📌  [**DMQ**]() &nbsp; [**消息队列**]() &nbsp; [**中间件**]() &nbsp; 
+📌  [**Dmq**]() &nbsp; [**消息队列**]() &nbsp; [**中间件**]() &nbsp; 
 
 🗓  March 01 2021 18:57:38.
 
@@ -434,7 +434,7 @@
 > [!ATTENTION|style:callout|label:摘要]
 > TCP BBR（Bottleneck Bandwidth and Round-trip propagation time）是由Google设计，于2016年发布的拥塞算法。以往大部分拥塞算法是基于丢包来作为降低传输速率的信号，而BBR则基于模型主动探测。 [阅读全文](node/001/TCP拥塞控制.md)
 
-📌  [**TCP**]() &nbsp; [**网络**]() &nbsp; [**BBR**]() &nbsp; 
+📌  [**Tcp**]() &nbsp; [**网络**]() &nbsp; [**Bbr**]() &nbsp; 
 
 🗓  March 01 2021 18:57:01.
 

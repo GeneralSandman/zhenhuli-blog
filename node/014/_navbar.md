@@ -1,5 +1,7 @@
-* [NSQ 🎉](/tags.md)
+* [Nsq 💄](/tags.md)
    * [Nsq学习笔记](node/037/Nsq学习笔记.md)
+
+   * [NSQ重塑之详细设计](node/020/NSQ重塑之详细设计.md)
 
    * [分布式实时消息平台NSQ](node/014/分布式实时消息平台NSQ.md)
 
