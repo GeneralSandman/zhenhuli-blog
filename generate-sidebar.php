@@ -501,21 +501,25 @@ function generateSideBarAction()
         $emojis = getConfigEmojis();
         // var_dump($article);
 
-        // echo "$title: ".implode(",", $article['tags'])."\n";
+        $dir = $article['dir'];
+
+        echo "$dir $title: ".implode(",", $article['tags'])."\n";
 
         // var_dump($article['tag']);
         foreach($article['tags'] as $tag) {
-            $articles = $tagToArticlesMap[$tag];
+            $sameTagArticles = $tagToArticlesMap[$tag];
 
             $emoji = $emojis[(int)hash('md4',$tag)%count($emojis)];
             $contents .= sprintf("* [%s %s](/tags.md)\n", $tag, $emoji);
-            foreach($articles as $article) {
-                $contents .= sprintf("   * [%s](%s)\n\n", $article['title'], $article['file']);
+            foreach($sameTagArticles as $tmpArticle) {
+                $contents .= sprintf("   * [%s](%s)\n\n", $tmpArticle['title'], $tmpArticle['file']);
             }
         }
-        // echo "$contents\n-----------------\n";
         $navbarFile = path_join($article['dir'], "/_navbar.md");
         file_put_contents($navbarFile, $contents);
+
+        // echo "$navbarFile\n$contents\n-----------------\n";
+
     }
 
 
@@ -575,7 +579,7 @@ function generateSideBarAction()
         array_push($graph["nodes"], $node);
     }
 
-    echo json_encode($graph);
+    // echo json_encode($graph);
     return;
 }
 
