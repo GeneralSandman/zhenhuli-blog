@@ -40,6 +40,8 @@
 
 * [**113-path-sum-ii**](leetcode/113-path-sum-ii/solution.md)
 
+* [**133-clone-graph**](leetcode/133-clone-graph/solution.md)
+
 * [**144-binary-tree-preorder-traversal**](leetcode/144-binary-tree-preorder-traversal/solution.md)
 
 * [**145-binary-tree-postorder-traversal**](leetcode/145-binary-tree-postorder-traversal/solution.md)
@@ -57,6 +59,8 @@
 * [**205-isomorphic-strings**](leetcode/205-isomorphic-strings/solution.md)
 
 * [**206-reverse-linked-list**](leetcode/206-reverse-linked-list/solution.md)
+
+* [**207-course-schedule**](leetcode/207-course-schedule/solution.md)
 
 * [**404-sum-of-left-leaves**](leetcode/404-sum-of-left-leaves/solution.md)
 

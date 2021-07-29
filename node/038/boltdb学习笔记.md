@@ -14,3 +14,7 @@
 boltdb 源码分析
 
 https://youjiali1995.github.io/storage/boltdb/
+
+
+bbolt 初体验
+https://zhengyinyong.com/post/bbolt-first-experience/
