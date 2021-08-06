@@ -9,6 +9,24 @@
 > 本文章整理一点在学习Scala时遇到的难点，写点例子分享一下。
 
 
+Scala 学习教程
+https://docs.scala-lang.org/zh-cn/tour/tour-of-scala.html
+
+
+Scala 在线运行工具
+
+https://scalafiddle.io/
+
+
+命令行执行 scala 交互式编程
+
+
+
+
+
+
+<iframe height="400px" frameborder="0" style="width: 100%" src="https://embed.scalafiddle.io/embed?sfid=FrnBgDQ/0&theme=dark&layout=v50"></iframe>
+
 ## 规范
 
 类名 - 对于所有的类名的第一个字母要大写。
