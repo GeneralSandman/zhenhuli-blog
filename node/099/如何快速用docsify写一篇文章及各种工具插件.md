@@ -6,6 +6,54 @@
 ![]()
 ![]()
 
+```plantuml
+@startuml
+
+skinparam responseMessageBelowArrow true
+
+actor User #red
+
+queue       DataBase       as DataBase
+
+User -> Billing
+
+User -> NSQD:   1.0 TCP Connect
+User -> NSQD:   1.1 Send MagicV2
+User -> NSQD:   1.2 Send Cmd:IDENTIFY
+NSQD --> User:  1.3 OK
+User -> NSQD:   1.4 Send Cmd:SUB
+User -> NSQD:   1.5 Send Cmd:RDY
+NSQD --> User:  1.6 OK
+User -> NSQD:  1.7 Send Cmd:NOP 
+NSQD --> User:	1.7 _heartbeat_
+User -> NSQD:  1.8 Send Cmd:NOP _heartbeat_
+NSQD --> User:	1.8 _heartbeat_
+
+
+Producer -> NSQD: 	2.0 TCP Connect
+Producer -> NSQD:	2.1 Send MagicV2
+Producer -> NSQD:	2.2 Send Cmd:IDENTIFY
+NSQD --> Producer:  2.3 OK
+NSQD --> Producer:  2.4 Send Cmd:NOP _heartbeat_
+NSQD --> Producer:  2.5 Send Cmd:NOP _heartbeat_
+NSQD --> Producer:  2.6 Send Cmd:NOP _heartbeat_
+Producer -> NSQD:	2.7 Send Cmd:PUB
+NSQD --> Producer:  2.8 OK
+
+
+NSQD --> User:  3.1 Send Nsq-Message
+User -> NSQD:   3.2 Send Cmd:FIN
+
+Producer -> NSQD:	2.9 Send Cmd:PUB
+NSQD --> Producer:  2.10 OK
+
+NSQD --> User:  3.3 Send Nsq-Message
+User -> NSQD:   3.4 Send Cmd:FIN
+
+
+@enduml
+```
+
 
 > [!TIP|style:flat|label:引用头]
 > 引用body1
