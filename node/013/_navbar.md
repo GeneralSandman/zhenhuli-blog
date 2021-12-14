@@ -1,4 +1,6 @@
 * [Go ♿](/tags.md)
+   * [流媒体服务器Monibuca学习笔记](node/043/流媒体服务器Monibuca学习笔记.md)
+
    * [Go语言学习路线](node/021/Go语言学习路线.md)
 
    * [布谷鸟过滤器](node/019/布谷鸟过滤器.md)
