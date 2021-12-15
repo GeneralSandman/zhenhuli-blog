@@ -47,6 +47,18 @@ go tool pprof -http=127.0.0.1:8068 profile
 ```
 
 
+```
+
+
+wget http://11.179.224.25:9095/debug/pprof/pprof/heap
+
+sz heap
+
+go tool pprof -http=127.0.0.1:8068 heap
+
+```
+
+
 
 ```
  /root/go/bin/go-torch -u http://localhost:6060/ --seconds 120 -f cpu.svg
