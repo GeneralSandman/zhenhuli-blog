@@ -4,11 +4,14 @@
 
 
 
-> [!TIP|style:flat|label:引用头]
-> 引用body1
-> 
-> In addition, this alert uses an own heading and hides specific icon.
-> 
+> [!TIP|style:flat|label:引言]
+>
+> NSQ是一个基于Go语言的分布式实时消息平台，它基于MIT开源协议发布，由bitly公司开源出来的一款简单易用的消息中间件。
+>
+> NSQ可用于大规模系统中的实时消息服务，并且每天能够处理数亿级别的消息，其设计目标是为在分布式环境下运行的去中心化服务提供一个强大的基础架构。
+>
+> NSQ具有分布式、去中心化的拓扑结构，该结构具有无单点故障、故障容错、高可用性以及能够保证消息的可靠传递的特征。NSQ非常容易配置和部署，且具有最大的灵活性，支持众多消息协议。
+>
 > 123132
 
 https://www.jianshu.com/p/f3500554f41c
@@ -286,4 +289,14 @@ nsqlookupd 发现服务，是一个记录并传播 NSQ 集群运行状态的守�
 新的消费者要订阅一个topic，只需启动一个配置了nsqlookupd实例地址的消费者客户端。消费者通常只需要一个 nsqlookupd（它们将会联合它们所知的nsqlookupd 实例响应）
 
 nsqlookupd中存储了nsqd集群所有节点的topic和channel信息，以HTTP API的方式向消费者提供查询指定topic的生产者，为消费者解决了识别nsqd服务的问题。
+
+
+
+
+
+
+
+
+
+
 
